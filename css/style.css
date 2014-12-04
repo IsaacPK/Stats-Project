@@ -14,7 +14,7 @@
 }
 
 #main {
-
+background-color: rgba(255,255,255,0.5);
 }
 .main-container{
 float:right;
@@ -49,9 +49,13 @@ max-height:500px;
 	margin-right:auto;
 	border-style: solid;
     border-width: 2px;
+	background-image: url("../img/background_fixed.png");
+	background-size: 100% 100%;
 }
+
 
 iframe{
 	overflow-x: hidden;
 	overflow-y: scroll;
+	backgroundColor = rgba(255,255,255,0.5);
 }

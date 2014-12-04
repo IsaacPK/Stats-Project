@@ -1,5 +1,5 @@
 function loadPage(url) {
-alert(url);
+/*alert(url);*/
 /*var req = new XMLHttpRequest();
 req.open("GET", url, false);
 req.send(null);
