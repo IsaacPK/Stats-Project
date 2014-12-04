@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<script language="javascript" type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 <div class="body-container">
@@ -10,9 +11,10 @@
 	<div id="body">
 		<div class="sidebar-container"><div id="sidebar">
 		This is in the sidebar.
+		<a href="" onclick="loadPage('pages/test.html'); return false;">click me</a>
 		</div></div><!--end sidebar-->
 		<div class="main-container"><div id="main">
-		This is in the main.
+		<iframe src="" name="main_frame" id="main_frame" frameborder="no" height = "500px" width = "720px"></iframe>
 		</div></div><!--end main-->
 	</div><!--end body-->
 </div>
