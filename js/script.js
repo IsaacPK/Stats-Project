@@ -11,50 +11,37 @@ cssLink .rel = "stylesheet";
 cssLink .type = "text/css"; 
 frames['main_frame'].document.body.appendChild(cssLink);*/
 /*document.getElementById("main_frame").contentWindow.location.reload(true);*/
+prepareSideList();
 }
 
-/* Sidebar */
-/*function prepareSideList() {
-	var list = document.getElementById("sideList");
-	var topicList = list.querySelectorAll(".topic");
-	for ( var i = 0 i < topics.length; i++) {
-		topics[i] = topicList[i];
-	}
-	
-		
-}
-End Sidebar*/
-
-function prepareList() {
-	alert("yay!");
-	//$('#expList')
-	var sideList = document.querySelectorAll('.expandable');
-	alert(sideList);
-	for ( var i = 0; i < sideList.length; i++)
+function prepareSideList() {					//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
+	var list = document.querySelectorAll(".expandable");
+	for (var i = 0; i < list.length; i++)
 	{
-		alert(sideList[i].innerHTML + " " + i);
-		sideList[i].addEventListener('click', function(event) {
-			if (this == event.target) {
-				
-			}
-		{
+		list[i].dataset.isExpanded = "true";
+		list[i].addEventListener("mousedown", function() { expand(event);});
 	}
-	lis.push("gay");
-	alert(lis);
 }
-	/*
-  .find('li:has(ul)')
-  	.click( function(event) {
-  		if (this == event.target) {
-  			$(this).toggleClass('expanded');
-  			$(this).children('ul').toggle('medium');
-  		}
-  		return false;
-  	})
-  	.addClass('collapsed')
-  	.children('ul').hide();
-  };
- 
-  $(document).ready( function() {
-      prepareList();
-  });*/
+
+  function expand(ev) {
+	
+		var hideList = ev.target.querySelectorAll('ul');
+		
+		if(ev.target.dataset.isExpanded == "true")	//Collapse a list topic
+		{
+			ev.target.dataset.isExpanded = "false";
+			for ( var i = 0; i < hideList.length; i++)
+			{
+				hideList[i].style.display = "none";
+			}
+		}
+		else
+		{
+			ev.target.dataset.isExpanded = "true";	//Expand a list topic
+			for ( var i = 0; i < hideList.length; i++)
+			{
+				hideList[i].style.display = "initial";
+			}
+		}
+
+  }
