@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	
+}
+
+body{
+	
+}
+
+.body-container{
+	width:960px;
+	height:580px;
+	margin-left: auto;
+	margin-right:auto;
+	border-style: solid;
+    border-width: 2px;
+	background-image: url("../img/background_fixed.png");
+	background-size: 100% 100%;
+	
+	text-align: center;
+}
+
+.form-container{
+	border: 1px solid black;
+	border-radius: 10px;
+	background: rgb(255,255,255);
+	
+	margin: 0 auto 0 auto;
+	padding: 5px;
+	width: 30%;
+	text-align: center;
+}
+
+.form-container input{
+	margin: 1px auto 1px auto;
+}
+
+.button{
+	padding: 3px;
+}
