@@ -7,6 +7,8 @@
 <div class="body-container">
 	<div class="header-container"><div id="header">
 	This is in the header.
+	<input id="searchBar" type="text" value="Enter query">
+	<img src="img/searchIcon.png" id="searchI" name="query" height="22" width="27" onclick="searchFor()">
 	</div></div><!--end header-->
 	<div id="body">
 		<div class="sidebar-container"><div id="sidebar">
@@ -49,6 +51,17 @@
 		</div></div><!--end main-->
 	</div><!--end body-->
 </div>
+
+<script>
+
+// This function is called when you click on the search icon.
+// At some point it should display the search results.
+function searchFor() {
+	alert(document.all("searchBar").value);
+}
+
+</script>
+
 </body>	
 </html>
 

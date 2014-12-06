@@ -13,6 +13,20 @@
 	top:0;
 }
 
+#searchBar {
+	position: fixed;
+	left: 920px;
+	font-size:18px;
+	font-family: Times;
+	margin: 20px 10px 10px;
+}
+
+#searchI {
+	position: fixed;
+	left:1108px;
+	top:23px;
+}
+
 #main {
 background-color: rgba(255,255,255,0.5);
 }
