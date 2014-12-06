@@ -1,0 +1,23 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/pages.css">
+</head>
+<body>
+	<h1>Percentile</h1>
+	<h2>Definition</h2>
+	<p>A percentile is a data value that is found above a percentage
+	of the remaining values in a data set. A value's percentile is calculated
+	by determining the count of data values below the given value, and dividing
+	the outcome by the total count of data values.</p>
+	<h2>R Code</h2>
+	<p>To find the percentile of a data set using R we use the 
+	function quantile(). There are several other functions that can also
+	be used. To learn about them type help(quantile) in R.</p>
+	<code>&gt quantile(classheights, c(.19,.29))</code>
+	<p>In this example, classheights is the name of
+	a set of values representing all of the heights of
+	students in Stat 151.This should be replaced with the
+	data set for which you would like to find the percentile value.</p>
+	<p>Additionally, c(.19,.29) represents the percentiles for which we would like 
+	to find the value. In this example R will tell us the values for the
+	19th and the 29th percentiles.</p>
+</body>

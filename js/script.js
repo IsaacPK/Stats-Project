@@ -24,7 +24,7 @@ function prepareSideList() {					//Add event listeners to all items of class "ex
 }
 
   function expand(ev) {
-	
+		
 		var hideList = ev.target.querySelectorAll('ul');
 		
 		if(ev.target.dataset.isExpanded == "true")	//Collapse a list topic
