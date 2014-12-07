@@ -47,3 +47,58 @@ function expand(ev) {
 	}
 
 }
+
+/*----Google Search----*/
+
+/*---In order for the search to execute properly it requires
+ * that the referrer url be associated with the API key.
+ * This code will not execute if it is not hosted on a server,
+ * and the domain isn't registered with the API key.
+ * /
+ 
+/*--executes search--*/
+function searchFor(){
+	var searchBox = document.getElementById("searchBar");
+	var searchTerm = searchBox.value;
+	var query = searchTerm.replace(" ","+");
+	
+	console.log("Search term: " + searchTerm);
+	 
+	var xmlHttp = null;
+	xmlHttp = new XMLHttpRequest();
+	
+	var cx = '014170545056911956546:khinlequpe4';
+    var key = 'AIzaSyDDWWkXSEtV6C61SHdCQZoWaF6llsNr1R4';
+    var callback = 'hndlr';
+    var url = 'https://www.googleapis.com/customsearch/v1?key=' + key 
+				+ '&cx=' + cx + '&q=' + query 
+				+ '&callback=' + callback;
+	console.log(url);
+	
+	xmlHttp.onreadystatechange
+	xmlHttp.open("GET", url, true);
+	xmlHttp.send(null);
+	xmlHttp.onreadystatechange = hndlr;
+}
+
+/*--handles response from google search--*/
+/*--will display gibbs results if error--*/
+ function hndlr() {
+	 if(this.readyState == 4 && this.status == 200){
+		 var responseText = this.responseText;
+		 var JSONresponse = responseText.substr(22,responseText.length - 25);
+		 //console.log(JSONresponse);
+		 var response = JSON.parse(JSONresponse);
+		 if(response.items != null){
+			 for (var i = 0; i < response.items.length; i++) {
+				var item = response.items[i];
+				document.getElementById("content").innerHTML += "<br>" +item.htmlTitle + "<br>" 
+																	+ item.htmlFormattedUrl + "<br>"
+																	+ item.htmlSnippet + "<br>";
+				}	
+		 }else{
+			loadPage('pages/gibbs_results.html');
+		 } 
+	 }  
+ }
+ /*----end google search----*/
