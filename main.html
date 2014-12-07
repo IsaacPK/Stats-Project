@@ -8,15 +8,15 @@
 	<div class="header-container"><div id="header">
     <a href="main.html"><img src="img/Logo.png" alt="Logo" style="width:250px;height:32px"></a>
 	<input id="searchBar" type="text" value="Enter query">
-	<img src="img/searchIcon.png" id="searchI" name="query" height="22" width="27" onclick="loadPage('pages/gibbs_results.html'); return false;">
+	<img src="img/searchIcon.png" id="searchI" name="query" height="22" width="27" onclick="searchFor()">
 	</div></div><!--end header-->
 	<div id="body">
 		<div class="sidebar-container"><div id="sidebar">
 	
 		<div id="homeworkSelectContainer">
-			Topics from Homework #
-			<select>
-				<option value="All">All</option>
+			&nbsp;Topics from Homework #
+			<select onchange="getHomeworkList(this.value)">
+				<option value="all">All</option>
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -45,6 +45,21 @@
 					<li>
 						<span><a href="" onclick="loadPage('pages/histogram.html'); return false;">Histogram</a></span>
 					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/beta-distribution.html'); return false;">Beta Distribution</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/posterior-distribution.html'); return false;">Posterior Distribution</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/prior-distribution.html'); return false;">Prior Distribution</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/credible-interval.html'); return false;">Credible Interval</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/gamma-distribution.html'); return false;">Gamma Distribution</a></span>
+					</li>
 				</ul>
 			</li>
 			<li class="expandable">TOPIC 2
@@ -62,21 +77,11 @@
 		
 		</div></div><!--end sidebar-->
 		<div class="main-container"><div id="main">
+		<div id="content"></div>
 		<iframe src="" name="main_frame" id="main_frame" frameborder="no" height = "500px" width = "720px" allowTransparency="true"></iframe>
 		</div></div><!--end main-->
 	</div><!--end body-->
 </div>
-
-<script>
-
-// This function is called when you click on the search icon.
-// At some point it should display the search results.
-function searchFor() {
-	alert(document.all("searchBar").value);
-}
-
-</script>
-
 </body>	
 </html>
 

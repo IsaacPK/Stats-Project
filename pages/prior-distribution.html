@@ -1,0 +1,13 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/pages.css">
+</head>
+<body>
+	<h1>Prior Probability Distribution</h1>
+	<h2>Definition</h2>
+	<p>In Bayesian statistical inference, a prior probability distribution, often called simply the prior, of an uncertain quantity p is the probability distribution that would express one's uncertainty about p before some evidence is taken into account. For example, p could be the probability distribution for the proportion of voters who will vote for a particular politician in a future election. It is meant to attribute uncertainty, rather than randomness, to the uncertain quantity. The unknown quantity may be a parameter or latent variable.</p>
+	<h2>R Code</h2>
+	<p>To find the prior distribution of a data set using R we use the 
+	function curve(dbeta(x,y,.z)).</p>
+	
+	<p>For example, suppose the goal is to estimate the average height of males at a small company that has 100 males, and given a sample size of 5. The data is collected the day before Christmas in the office, so most people are on vacation. Prior to collecting the data, the Bayesian statistician could estimate that, given prior office experience, their belief about male height in the office is normally distributed with a mean of 68 inches and a standard deviation of 5 inches. When the sample of 5 males is collected, it is approximately normally distributed, but has a mean of 71 inches and a standard deviation of 4 inches. Bayesian inference considers both the statistitician's prior belief (prior probabilities) and the data, and estimates a resulting distribution, the posterior probability distribution.</p>
+</body>
