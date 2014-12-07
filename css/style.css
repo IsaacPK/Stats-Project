@@ -111,3 +111,12 @@ iframe{
 	background-image: url(../img/expandedSm.png);
 }
 /* End Sidebar */
+
+#homeworkSelectContainer {
+	background-color: rgb(36,93,144);
+	color:	white;
+}
+
+select {
+
+}

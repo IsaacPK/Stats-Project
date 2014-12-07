@@ -36,7 +36,7 @@ function expand(ev) {
 			hideList[i].style.display = "none";
 		}
 	}
-	else
+	else if(ev.target.dataset.isExpanded == "false")	//can't just say "else" because sub menus have isExpanded == undefined
 	{
 		ev.target.dataset.isExpanded = "true";	//Expand a list topic
 		ev.target.style.backgroundImage = "url(img/expandedSm.png)";
