@@ -1,4 +1,17 @@
 
+#heading {
+	font-size:18px;
+}
+
+#title {    
+	font: 19px/1.2em "Segoe UI",Arial,Helvetica,sans-serif;
+    color: #1020D0;
+}
+
+#content {
+	width: 520px;
+}
+
 #b_results {
 	display: block;
 }
@@ -28,16 +41,19 @@ div1 {
 	left:535px;
 }
 
-#up { top:20px; }
-#down { top:56px; }
-#u2 { top:125px; }
-#d2 { top:161px; }
-#u3 { top:220px; }
-#d3 { top:256px; }
-#u4 { top:305px; }
-#d4 { top:341px; }
-#u5 { top:400px; }
-#d5 { top:436px; }
+#u1 { top:35px; }
+#d1 { top:71px; }
+
+#up { top:130px; }
+#down { top:166px; }
+#u2 { top:240px; }
+#d2 { top:276px; }
+#u3 { top:335px; }
+#d3 { top:371px; }
+#u4 { top:425px; }
+#d4 { top:461px; }
+#u5 { top:514px; }
+#d5 { top:550px; }
 
 #rat {
 	position:absolute;
