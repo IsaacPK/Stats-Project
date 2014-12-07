@@ -23,26 +23,27 @@ function prepareSideList() {					//Add event listeners to all items of class "ex
 	}
 }
 
-  function expand(ev) {
+function expand(ev) {
 				
-		var hideList = ev.target.querySelectorAll('ul');
-		
-		if(ev.target.dataset.isExpanded == "true")	//Collapse a list topic
+	var hideList = ev.target.querySelectorAll('ul');
+	
+	if(ev.target.dataset.isExpanded == "true")	//Collapse a list topic
+	{
+		ev.target.dataset.isExpanded = "false";
+		ev.target.style.backgroundImage = "url(img/collapsedSm.png)";
+		for ( var i = 0; i < hideList.length; i++)
 		{
-			ev.target.dataset.isExpanded = "false";
-			for ( var i = 0; i < hideList.length; i++)
-			{
-				hideList[i].style.display = "none";
-			}
+			hideList[i].style.display = "none";
 		}
-		else
+	}
+	else
+	{
+		ev.target.dataset.isExpanded = "true";	//Expand a list topic
+		ev.target.style.backgroundImage = "url(img/expandedSm.png)";
+		for ( var i = 0; i < hideList.length; i++)
 		{
-			ev.target.dataset.isExpanded = "true";	//Expand a list topic
-			
-			for ( var i = 0; i < hideList.length; i++)
-			{
-				hideList[i].style.display = "initial";
-			}
+			hideList[i].style.display = "initial";
 		}
+	}
 
-  }
+}

@@ -107,7 +107,7 @@ iframe{
 	background-image: url(../img/collapsed.png);
 }
 
-#sideList .expanded  {
-	background-image: url(../img/expanded.png);
+#sideList .expandable  {
+	background-image: url(../img/expandedSm.png);
 }
 /* End Sidebar */
