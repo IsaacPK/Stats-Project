@@ -11,7 +11,7 @@ cssLink .rel = "stylesheet";
 cssLink .type = "text/css"; 
 frames['main_frame'].document.body.appendChild(cssLink);*/
 /*document.getElementById("main_frame").contentWindow.location.reload(true);*/
-prepareSideList();
+//prepareSideList();
 }
 
 function prepareSideList() {					//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
@@ -24,7 +24,7 @@ function prepareSideList() {					//Add event listeners to all items of class "ex
 }
 
   function expand(ev) {
-		
+				
 		var hideList = ev.target.querySelectorAll('ul');
 		
 		if(ev.target.dataset.isExpanded == "true")	//Collapse a list topic
@@ -38,6 +38,7 @@ function prepareSideList() {					//Add event listeners to all items of class "ex
 		else
 		{
 			ev.target.dataset.isExpanded = "true";	//Expand a list topic
+			
 			for ( var i = 0; i < hideList.length; i++)
 			{
 				hideList[i].style.display = "initial";
