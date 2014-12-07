@@ -1,0 +1,13 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/pages.css">
+</head>
+<body>
+	<h1>Credible Interval</h1>
+	<h2>Definition</h2>
+	<p>In Bayesian statistics, a credible interval (or Bayesian confidence interval[citation needed]) is an interval in the domain of a posterior probability distribution used for interval estimation. The generalisation to multivariate problems is the credible region. Credible intervals are analogous to confidence intervals in frequentist statistics,although they differ on a philosophical basis;Bayesian intervals treat their bounds as fixed and the estimated parameter as a random variable, whereas frequentist confidence intervals treat their bounds as random variables and the parameter as a fixed value.</p>
+	<h2>R Code</h2>
+	<p>To find the credible interval of a data set using R we use the 
+	function qnorm(.x).</p>
+	
+	<p>For example, if a statistical method estimates the mean height of a population to be 70 inches, with a 95% credible interval of 65-75, then the estimated posterior probability is that 95% of that population is between 65 and 75 inches, with a mean of 70.For the same example, must be interpreted as a range in which the mean would occur 95% of the time with repeated sampling, with no indication as to whether or not the current interval estimated from the current sample contains the mean. The probability that the mean is within the confidence interval is either 0 or 1. Frequentist methods consider the parameter, the mean in this case, to be fixed. Therefore, a frequentist parameter is only a point estimate, and does not have a probability distribution. For these reasons, many people intuitively misinterpret a frequentist confidence interval as though it were a Bayesian probability interval, perceiving the interval to be a probabilistic region around the parameter.</p>
+</body>
