@@ -1,13 +1,48 @@
 
 #b_results {
-	width: 520px;
-	font-style: Arial;
 	display: block;
 }
 
 li {
     display: inline;
 }
+
+.b_algo {
+	width: 520px;
+	display: block;
+}
+
+img {
+	height:35;
+	width:69;
+}
+
+#rat {
+	position: absolute;
+	left: 46px;
+	top: 9px;
+}
+
+div1 {
+	position:absolute;
+	left:535px;
+}
+
+#up { top:20px; }
+#down { top:56px; }
+#u2 { top:125px; }
+#d2 { top:161px; }
+#u3 { top:220px; }
+#d3 { top:256px; }
+#u4 { top:305px; }
+#d4 { top:341px; }
+#u5 { top:400px; }
+#d5 { top:436px; }
+
+#rat {
+	position:absolute;
+}
+
 .sb_doct_txt {
     color: #1020D0;
     font-size: 11px;
