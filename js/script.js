@@ -1,3 +1,39 @@
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+	//if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		var myArr = JSON.parse(xmlhttp.responseText);
+		loadHomeworkList(myArr);
+	//}
+}
+
+function loadHomeworkList(myArr) {
+	var output = '<ul id="sideList">';
+	
+	for(var i = 0; i < myArr.length; i++) {
+		output += '<li class="expandable">' + myArr[i].topic + '<ul>';
+		for(var j = 0; j < myArr[i].subtopics.length; j++) {
+			output += '<li><span><a href="" onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\'); return false;">' + myArr[i].subtopics[j].name + '</a></span></li>';
+		}
+		output += '</ul></li>';
+	}
+	
+	output += '</ul>';
+	
+	var sideList = document.getElementById("sideListContainer");
+
+	sideList.innerHTML = output;
+	
+	prepareSideList();
+}
+
+function getHomeworkList(val)
+{
+	var filename = "json/homework_" + val + ".json";
+	xmlhttp.open("GET", filename, true);
+	xmlhttp.send();
+}
+
 function loadPage(url) {
 /*alert(url);*/
 /*var req = new XMLHttpRequest();
