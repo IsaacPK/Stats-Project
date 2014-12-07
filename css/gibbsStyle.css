@@ -1,0 +1,48 @@
+
+#b_results {
+	width: 520px;
+	font-style: Arial;
+	display: block;
+}
+
+li {
+    display: inline;
+}
+.sb_doct_txt {
+    color: #1020D0;
+    font-size: 11px;
+    line-height: 2.2;
+    margin-right: 3px;
+}
+.b_float {
+    float: left;
+}
+
+#b_results > li a {
+    color: #1020D0;
+}
+
+cite {
+    font-style: normal;
+    word-wrap: break-word;
+	color: #009030;
+}
+
+h2 {
+    font: 18px/1.2em "Segoe UI",Arial,Helvetica,sans-serif;
+	font-size: 18px;
+}
+
+h2, .b_focusLabel, label {
+    padding-bottom: 3px;
+}
+h2, p, ol, ul, li {
+    border: 0px none;    
+	list-style: outside none none;
+    margin: 0px;
+    padding: 0px;
+}
+
+p, cite {
+    font: 13px Arial,Helvetica,sans-serif;
+}
