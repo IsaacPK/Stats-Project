@@ -14,17 +14,16 @@
 }
 
 #searchBar {
-	position: fixed;
-	left: 920px;
+	position: relative;
+	left: 500px;
 	font-size:18px;
 	font-family: Times;
-	margin: 20px 10px 10px;
 }
 
 #searchI {
-	position: fixed;
-	left:1108px;
-	top:23px;
+	position: relative;
+	left:468px;
+	top:5px;
 }
 
 #main {
