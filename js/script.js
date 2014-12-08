@@ -138,7 +138,7 @@ function searchFor(searchTerm){
 		 var response = JSON.parse(JSONresponse);
 		 console.log(responseText);
 		 if(response.items != null){
-			var html = "'data:text/html;charset=utf-8,'"/*document.getElementByTag("body").innerHTML = "";*/
+			var html = "data:text/html;charset=utf-8,"/*document.getElementByTag("body").innerHTML = "";*/
 			for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
 				var temphtml = "";
