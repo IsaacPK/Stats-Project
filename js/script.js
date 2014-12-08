@@ -147,7 +147,7 @@ function searchFor(searchTerm){
 																	+ item.htmlSnippet + "<br>";
 				html += encodeURI(temphtml);
 				}
-			document.getElementByID("main_frame").src = html;
+			document.getElementById("main_frame").src = html;
 		 }else{
 			alert("Search Error");
 			/*loadPage('pages/gibbs_results.html');*/
