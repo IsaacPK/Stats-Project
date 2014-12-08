@@ -138,13 +138,16 @@ function searchFor(searchTerm){
 		 var response = JSON.parse(JSONresponse);
 		 console.log(responseText);
 		 if(response.items != null){
-			document.getElementByTag("body").innerHTML = "";
+			var html = "'data:text/html;charset=utf-8,'"/*document.getElementByTag("body").innerHTML = "";*/
 			for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
-				document.getElementByTag("body").innerHTML += "<br>" +'<a target="_top" ' + 'href="../pages/searchResults.html?a='+encodeURIComponent(item.htmlFormattedUrl)+'">'+ item.htmlTitle + "</a><br>" 
+				var temphtml = "";
+				temphtml = "<br>" +'<a target="_top" ' + 'href="../pages/searchResults.html?a='+encodeURIComponent(item.htmlFormattedUrl)+'">'+ item.htmlTitle + "</a><br>" 
 																	+ item.htmlFormattedUrl + "<br>"
 																	+ item.htmlSnippet + "<br>";
-				}	
+				html += encodeURI(temphtml);
+				}
+			document.getElementByID("main_frame").src = html;
 		 }else{
 			alert("Search Error");
 			/*loadPage('pages/gibbs_results.html');*/
@@ -175,7 +178,7 @@ function search(){
 }
 
 function doSearch(searchTerm){
-	loadPage("pages/searchResults.html?a="+encodeURIComponent(searchTerm));
+	/*loadPage("pages/searchResults.html?a="+encodeURIComponent(searchTerm));*/
 }
 
 //called when back button is pressed
