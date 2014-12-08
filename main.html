@@ -12,7 +12,7 @@
 	</div></div><!--end header-->
 	<div id="body">
 		<div class="sidebar-container"><div id="sidebar">
-	
+		<a href='#' onclick='overlay()'>Click here to show the overlay</a>
 		<div id="homeworkSelectContainer">
 			&nbsp;Topics from Homework #
 			<select onchange="getHomeworkList(this.value);">
@@ -82,6 +82,9 @@
 		</div></div><!--end main-->
 	</div><!--end body-->
 </div>
+<div id="overlay"><div class="modal">
+Click here to [<a href='#' onclick='overlay()'>close</a>]
+</div></div>
 </body>	
 </html>
 
