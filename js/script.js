@@ -137,3 +137,10 @@ function searchFor(){
 	 }  
  }
  /*----end google search----*/
+ 
+function myFunction(ev) {
+	if(ev.which == 13)
+	{
+		searchFor();
+	}
+}
