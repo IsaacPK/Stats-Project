@@ -179,6 +179,7 @@ function search(){
 
 function doSearch(searchTerm){
 	/*loadPage("pages/searchResults.html?a="+encodeURIComponent(searchTerm));*/
+	searchFor(searchTerm);
 }
 
 //called when back button is pressed
