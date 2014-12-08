@@ -55,12 +55,11 @@ function prepareSideList() {					//Add event listeners to all items of class "ex
 	for (var i = 0; i < list.length; i++)
 	{
 		list[i].dataset.isExpanded = "true";
-		list[i].addEventListener("mousedown", function() { expand(event);});
+		list[i].addEventListener("click", function(event) { expand(event);}, false);
 	}
 }
 
 function expand(ev) {
-				
 	var hideList = ev.target.querySelectorAll('ul');
 	
 	if(ev.target.dataset.isExpanded == "true")	//Collapse a list topic
