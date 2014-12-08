@@ -142,3 +142,10 @@ function searchFor(){
 	el = document.getElementById("overlay");
 	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 }
+
+function myFunction(ev) {
+	if(ev.which == 13)
+	{
+		searchFor();
+	}
+}
