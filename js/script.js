@@ -138,13 +138,13 @@ function searchFor(searchTerm){
 		 var response = JSON.parse(JSONresponse);
 		 console.log(responseText);
 		 if(response.items != null){
-			var html = "data:text/html;charset=utf-8,"+ encodeURI("<head><base href='http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/' target='_top' /></head>");/*document.getElementByTag("body").innerHTML = "";*/
+			var html = "data:text/html;charset=utf-8,"+ encodeURI("<head><base href='http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/' target='_top' /><link rel='stylesheet' type='text/css' href='css/gibbsStyle.css'></head>");/*document.getElementByTag("body").innerHTML = "";*/
 			for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
 				console.log(responseText);
 				var temphtml = "";
-				temphtml = "<br>" +'<a target="_top" '+'href="search.html?a='+encodeURIComponent(item.link)+'">'+ item.htmlTitle + "</a><br>" 
-																	+ item.htmlFormattedUrl + "<br>"
+				temphtml = "<br>" +'<li class="b_algo"><h2><a target="_top" '+'href="search.html?a='+encodeURIComponent(item.link)+'">'+ item.htmlTitle + "</a></h2>" 
+																	+"<cite>" + item.htmlFormattedUrl + "</cite><br>"
 																	+ item.htmlSnippet + "<br>";
 				html += encodeURI(temphtml);
 				}
