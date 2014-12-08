@@ -141,7 +141,7 @@ function searchFor(searchTerm){
 			document.getElementByTag("body").innerHTML = "";
 			for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
-				document.getElementByTag("body").innerHTML += "<br>" +item.htmlTitle + "<br>" 
+				document.getElementByTag("body").innerHTML += "<br>" +'<a target="_top" ' + 'href="../pages/searchResults.html?a='+encodeURIComponent(item.htmlFormattedUrl)+'">'+ item.htmlTitle + "</a><br>" 
 																	+ item.htmlFormattedUrl + "<br>"
 																	+ item.htmlSnippet + "<br>";
 				}	
