@@ -31,13 +31,13 @@ body{
     text-decoration: none;
     cursor: pointer;
     border-width:1px;
-	border-color:rgb(124,175,22);
+	border-color:rgb(124,175,222);
 	border-style:solid;
 	white-space: normal;
 }
 
-.button::hover{
-	box-shadow: 0px 0px 5px #777;
+.button:hover{
+	background-color:#7CAFDE;
 }
 
 #sendFeedback{
@@ -46,6 +46,12 @@ body{
 	width:80px;
 	height:50px;
 	float:right;
+	visibility:hidden;
+}
+
+#feedbackSubmit{
+	width:80px;
+	height:50px;
 }
 
 #backButton{
@@ -54,6 +60,7 @@ body{
 	width:58px;
 	height:50px;
 	float:right;
+	visibility:hidden;
 }
 
 #submit:hover {
@@ -197,7 +204,6 @@ select {
 }
 
 #overlay div {
-     width:300px;
      margin: 100px auto;
      background-color: #fff;
      border:1px solid #000;
@@ -206,8 +212,8 @@ select {
 }
 
 .modal{
-width:200px;
-height:150px;
+width:400px;
+height:250px;
 background-color:white;
 position:relative;
 border-style:solid;
@@ -215,3 +221,6 @@ border-width:3px;
 
 }
 
+textarea{
+resize: none;
+}
