@@ -48,6 +48,16 @@ cssLink .type = "text/css";
 frames['main_frame'].document.body.appendChild(cssLink);*/
 /*document.getElementById("main_frame").contentWindow.location.reload(true);*/
 //prepareSideList();
+if(url === "pages/main.html")
+{
+	document.getElementById("backButton").style.visibility = "hidden";
+	document.getElementById("sendFeedback").style.visibility = "hidden";
+}
+else
+{
+	document.getElementById("backButton").style.visibility = "visible";
+	document.getElementById("sendFeedback").style.visibility = "visible";
+}
 }
 
 function prepareSideList() {					//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
@@ -138,6 +148,7 @@ function searchFor(){
  }
  /*----end google search----*/
  
+ //toggles modal overlay display
  function overlay() {
 	el = document.getElementById("overlay");
 	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
@@ -148,4 +159,9 @@ function myFunction(ev) {
 	{
 		searchFor();
 	}
+}
+
+//called when back button is pressed
+function backButton(){
+	loadPage("pages/main.html");
 }
