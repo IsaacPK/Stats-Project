@@ -175,6 +175,8 @@ function search(){
 	var searchTerm = searchBox.value;
 	doSearch(searchTerm);
 	searchBox.value="";
+	document.getElementById("backButton").style.visibility = "visible";
+	document.getElementById("sendFeedback").style.visibility = "hidden";
 }
 
 function doSearch(searchTerm){
