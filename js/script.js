@@ -143,7 +143,7 @@ function searchFor(searchTerm){
 				var item = response.items[i];
 				console.log(responseText);
 				var temphtml = "";
-				temphtml = "<br>" +'<a '+'href="search.html?a='+encodeURIComponent(item.htmlFormattedUrl)+'">'+ item.htmlTitle + "</a><br>" 
+				temphtml = "<br>" +'<a '+'href="search.html?a='+encodeURIComponent(item.link)+'">'+ item.htmlTitle + "</a><br>" 
 																	+ item.htmlFormattedUrl + "<br>"
 																	+ item.htmlSnippet + "<br>";
 				html += encodeURI(temphtml);
