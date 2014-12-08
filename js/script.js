@@ -106,9 +106,7 @@ function expand(ev) {
  * /
  
 /*--executes search--*/
-function searchFor(){
-	var searchBox = document.getElementById("searchBar");
-	var searchTerm = searchBox.value;
+function searchFor(searchTerm){
 	var query = searchTerm.replace(" ","+");
 	
 	console.log("Search term: " + searchTerm);
@@ -128,7 +126,6 @@ function searchFor(){
 	xmlHttp.open("GET", url, true);
 	xmlHttp.send(null);
 	xmlHttp.onreadystatechange = hndlr;
-	searchBox.value="";
 }
 
 /*--handles response from google search--*/
@@ -141,14 +138,16 @@ function searchFor(){
 		 var response = JSON.parse(JSONresponse);
 		 console.log(responseText);
 		 if(response.items != null){
-			 for (var i = 0; i < response.items.length; i++) {
+			document.getElementByTag("body").innerHTML = "";
+			for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
-				document.getElementById("content").innerHTML += "<br>" +item.htmlTitle + "<br>" 
+				document.getElementByTag("body").innerHTML += "<br>" +item.htmlTitle + "<br>" 
 																	+ item.htmlFormattedUrl + "<br>"
 																	+ item.htmlSnippet + "<br>";
 				}	
 		 }else{
-			loadPage('pages/gibbs_results.html');
+			alert("Search Error");
+			/*loadPage('pages/gibbs_results.html');*/
 		 } 
 	 }  
  }
@@ -164,8 +163,19 @@ function searchFor(){
 function myFunction(ev) {
 	if(ev.which == 13)
 	{
-		searchFor();
+		search();
 	}
+}
+
+function search(){
+	var searchBox = document.getElementById("searchBar");
+	var searchTerm = searchBox.value;
+	doSearch(searchTerm);
+	searchBox.value="";
+}
+
+function doSearch(searchTerm){
+	loadPage("pages/searchResults?a=".encodeURIComponent(searchTerm));
 }
 
 //called when back button is pressed
