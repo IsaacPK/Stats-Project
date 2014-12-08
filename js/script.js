@@ -53,6 +53,10 @@ if(url === "pages/main.html")
 	document.getElementById("backButton").style.visibility = "hidden";
 	document.getElementById("sendFeedback").style.visibility = "hidden";
 }
+else if(url === "pages/searchResults.html"){
+	document.getElementById("backButton").style.visibility = "visible";
+	document.getElementById("sendFeedback").style.visibility = "hidden";
+}
 else
 {
 	document.getElementById("backButton").style.visibility = "visible";
@@ -124,6 +128,7 @@ function searchFor(){
 	xmlHttp.open("GET", url, true);
 	xmlHttp.send(null);
 	xmlHttp.onreadystatechange = hndlr;
+	searchBox.value="";
 }
 
 /*--handles response from google search--*/
@@ -134,6 +139,7 @@ function searchFor(){
 		 var JSONresponse = responseText.substr(22,responseText.length - 25);
 		 //console.log(JSONresponse);
 		 var response = JSON.parse(JSONresponse);
+		 console.log(responseText);
 		 if(response.items != null){
 			 for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
@@ -165,4 +171,24 @@ function myFunction(ev) {
 //called when back button is pressed
 function backButton(){
 	loadPage("pages/main.html");
+}
+
+//gets query value from url
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+//sets page to page in url and sizes iframe height
+function parsePageQuery(){	
+	var body = document.body,
+    html = document.documentElement;
+	var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+	document.getElementById("search_frame").style.height = height-170;
+	/*document.getElementsByTagName("body").style.height = height-200;*/
+	
+	document.getElementById("search_frame").src = getParameterByName("a");
 }

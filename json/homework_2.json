@@ -1,46 +1,66 @@
 [
 	{
-		"topic":"BASIC CONCEPTS",
+		"topic":"Question 1",
 		"subtopics":[
 		{
-			"name":"Mean",
-			"ref":"pages/test.html"
+			"name":"Prior Distribution",
+			"ref":"pages/prior-distribution.html"
 		},
 		{
-			"name":"Median",
-			"ref":"pages/test2.html"
-		},
-		{
-			"name":"Variance",
-			"ref":"pages/variance.html"
-		},
-		{
-			"name":"Standard Deviation",
-			"ref":"pages/standard-deviation.html"
-		},
-		{
-			"name":"Percentile",
-			"ref":"pages/percentile.html"
-		},
-		{
-			"name":"Histogram",
-			"ref":"pages/histogram.html"
+			"name":"Posterior Distribution",
+			"ref":"pages/posterior-distribution.html"
 		}]
 	},
 	{
-		"topic":"ADVANCED CONCEPTS",
+		"topic":"Question 2",
 		"subtopics":[
 		{
-			"name":"Subtopic 1",
-			"ref":""
+			"name":"Prior Distribution",
+			"ref":"pages/prior-distribution.html"
 		},
 		{
-			"name":"Subtopic 2",
-			"ref":""
+			"name":"Posterior Distribution",
+			"ref":"pages/posterior-distribution.html"
+		}]
+	},
+	{
+		"topic":"Question 3",
+		"subtopics":[
+		{
+			"name":"Credible Interval",
+			"ref":"pages/credible-interval.html"
+		}]
+	},
+	{
+		"topic":"Question 4",
+		"subtopics":[
+		{
+			"name":"Prior Distribution",
+			"ref":"pages/prior-distribution.html"
 		},
 		{
-			"name":"Subtopic 3",
-			"ref":""
+			"name":"Posterior Distribution",
+			"ref":"pages/posterior-distribution.html"
+		},
+		{
+			"name":"Credible Interval",
+			"ref":"pages/credible-interval.html"
+		}]
+	},
+	{
+		"topic":"Question 5",
+		"subtopics":[
+		{
+			"name":"Prior Distribution",
+			"ref":"pages/prior-distribution.html"
+		},
+		{
+			"name":"Posterior Distribution",
+			"ref":"pages/posterior-distribution.html"
+		},
+		{
+			"name":"Credible Interval",
+			"ref":"pages/credible-interval.html"
 		}]
 	}
 ]

@@ -22,6 +22,16 @@ body{
 	top:0;
 }
 
+#search-header{
+	padding-left:10px;
+}
+.search-header-container{
+	width:100%;
+	height:80px;
+	z-index:900;
+	top:0;
+}
+
 .button{
 	position: relative;
 	font-size:18px;
@@ -41,7 +51,7 @@ body{
 }
 
 #sendFeedback{
-	right: 280px;
+	right: 120px;
 	top:13px;
 	width:80px;
 	height:50px;
@@ -51,11 +61,11 @@ body{
 
 #feedbackSubmit{
 	width:80px;
-	height:50px;
+	height:40px;
 }
 
 #backButton{
-	right: 130px;
+	right: -30px;
 	top:13px;
 	width:58px;
 	height:50px;
@@ -71,15 +81,18 @@ body{
 
 #searchBar {
 	position: relative;
-	left: 500px;
+	top:25px;
+	right: 20px;
 	font-size:18px;
 	font-family: accentFont;
+	float:right;
 }
 
 #searchI {
 	position: relative;
-	left:468px;
-	top:5px;
+	right:-295px;
+	top:26px;
+	float:right;
 }
 
 #main {
@@ -103,12 +116,13 @@ border-top-width: 6px;
 padding-left: 5px;
 padding-right: 5px;
 height:500px;
+overflow:hidden;
 }
 .sidebar-container{
 float:left;
 width:240px;
 min-height:500px;
-overflow: auto;
+overflow: hidden;
 max-height:500px;
 }
 #body{
@@ -131,13 +145,19 @@ max-height:500px;
 }
 
 
-iframe{
+#main-frame{
 	overflow-x: hidden;
 	overflow-y: scroll;
 	width:700;
 	max-width:700;
 	height:493;
-	backgroundColor = rgba(255,255,255,0.5);
+	background-color = rgba(255,255,255,0.5);
+}
+
+#search_frame{
+	margin-left:2px;
+	width:100%;
+	background-color = rgba(255,255,255,0.5);
 }
 
 /* Sidebar */
@@ -145,6 +165,8 @@ iframe{
 	margin-top: 15px;
 	font-family: accentFont;
 	color: rgb(36,93,144);
+	overflow-y:auto;
+	max-height:450px;
 }
 
 #sideListContainer a {
@@ -158,6 +180,9 @@ iframe{
 	padding: 0;	
 }
 
+#sidelist {
+overflow-y:auto;
+}
 #sideList li {
 	line-height: 180%;
 	text-indent: 0px;
@@ -218,7 +243,7 @@ background-color:white;
 position:relative;
 border-style:solid;
 border-width:3px;
-
+border-radius:6px;
 }
 
 textarea{

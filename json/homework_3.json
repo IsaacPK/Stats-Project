@@ -1,46 +1,62 @@
 [
 	{
-		"topic":"BASIC CONCEPTS",
+		"topic":"QUESTION 1",
 		"subtopics":[
 		{
 			"name":"Mean",
 			"ref":"pages/test.html"
 		},
 		{
-			"name":"Median",
-			"ref":"pages/test2.html"
-		},
-		{
 			"name":"Variance",
 			"ref":"pages/variance.html"
 		},
 		{
-			"name":"Standard Deviation",
-			"ref":"pages/standard-deviation.html"
-		},
-		{
-			"name":"Percentile",
-			"ref":"pages/percentile.html"
-		},
-		{
-			"name":"Histogram",
-			"ref":"pages/histogram.html"
+			"name":"Prior Distribution",
+			"ref":"pages/prior-distribution.html"
 		}]
 	},
 	{
-		"topic":"ADVANCED CONCEPTS",
+		"topic":"QUESTION 2",
 		"subtopics":[
 		{
-			"name":"Subtopic 1",
-			"ref":""
+			"name":"Mean",
+			"ref":"pages/test.html"
 		},
 		{
-			"name":"Subtopic 2",
-			"ref":""
+			"name":"Variance",
+			"ref":"pages/variance.html"
+		}]
+	},
+	{
+		"topic":"QUESTION 3",
+		"subtopics":[
+		{
+			"name":"Mean",
+			"ref":"pages/test.html"
 		},
 		{
-			"name":"Subtopic 3",
-			"ref":""
+			"name":"Variance",
+			"ref":"pages/variance.html"
+		}]
+	},
+	{
+		"topic":"QUESTION 4",
+		"subtopics":[
+		{
+			"name":"Mean",
+			"ref":"pages/test.html"
+		},
+		{
+			"name":"Variance",
+			"ref":"pages/variance.html"
+		}]
+	},
+	{
+		"topic":"QUESTION 5",
+		"subtopics":[
+		{
+			"name":"Beta Distribution",
+			"ref":"pages/beta-distribution.html"
 		}]
 	}
 ]
