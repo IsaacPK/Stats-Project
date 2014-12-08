@@ -1,0 +1,95 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style-test.css">
+<script language="javascript" type="text/javascript" src="js/script.js"></script>
+</head>
+<body onload="prepareSideList()";>
+<div class="body-container">
+	<div class="header-container"><div id="header">
+    <a href="main.html"><img src="img/Logo.png" alt="Logo" style="width:250px;height:42px"></a>
+	<input width="400" id="searchBar" type="text" placeholder="Enter query" onkeydown="myFunction(event);">
+	<input type=submit id="searchTrends" class="button" value="Search Trends" onclick="loadPage('search-trends.html'); return false;"/>
+	<input type=submit id="sendFeedback" class="button" value="Send Feedback"/>
+	<input type=submit id="backButton" class="button" value="Back"/>
+	<img src="img/searchIcon.png" id="searchI" name="query" height="22" width="27" onclick="searchFor();">
+	</div></div><!--end header-->
+	<div id="body">
+		<div class="sidebar-container"><div id="sidebar">
+		<div id="homeworkSelectContainer">
+			&nbsp;Topics from Homework #
+			<select onchange="getHomeworkList(this.value);">
+				<option value="all">All</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select>
+		</div>
+		
+		<div id="sideListContainer">
+		<ul id="sideList">
+			<li class="expandable">BASIC CONCEPTS
+				<ul>
+					<li>
+						<span><a href="" onclick="loadPage('pages/test.html'); return false;">Mean</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/test2.html'); return false;">Median</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/variance.html'); return false;">Variance</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/standard-deviation.html'); return false;">Standard Deviation</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/percentile.html'); return false;">Percentile</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/histogram.html'); return false;">Histogram</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/beta-distribution.html'); return false;">Beta Distribution</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/posterior-distribution.html'); return false;">Posterior Distribution</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/prior-distribution.html'); return false;">Prior Distribution</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/credible-interval.html'); return false;">Credible Interval</a></span>
+					</li>
+					<li>
+						<span><a href="" onclick="loadPage('pages/gamma-distribution.html'); return false;">Gamma Distribution</a></span>
+					</li>
+				</ul>
+			</li>
+			<li class="expandable">TOPIC 2
+				<ul>
+					<li>
+						<span>Sub 2.1</span>
+					</li>
+					<li>
+						<span>Sub 2.2</span>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		
+		</div></div><!--end sidebar-->
+		<div class="main-container"><div id="main">
+		<div id="content"></div>
+		<iframe src="" name="main_frame" id="main_frame" frameborder="no" height = "500px" width = "720px" allowTransparency="true"></iframe>
+		</div></div><!--end main-->
+	</div><!--end body-->
+</div>
+<div id="overlay"><div class="modal">
+Click here to [<a href='#' onclick='overlay()'>close</a>]
+</div></div>
+</body>	
+</html>
+
+
+
+
