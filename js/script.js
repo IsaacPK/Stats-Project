@@ -123,8 +123,8 @@ function searchFor(searchTerm){
 	console.log(url);
 	
 	xmlHttp.onreadystatechange
-	xmlHttp.setRequestHeader("Referer", "http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/searchResults.html");
 	xmlHttp.open("GET", url, true);
+	xmlHttp.setRequestHeader("Referer", "http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/searchResults.html");
 	xmlHttp.send(null);
 	xmlHttp.onreadystatechange = hndlr;
 }
