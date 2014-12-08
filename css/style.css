@@ -37,19 +37,24 @@ body{
 
 #main {
 	background-color: rgba(255,255,255,0.4);
+	width:700px;
+	height:493px;
 }
 .main-container{
 float:right;
-width:720px;
-min-height:500px;
+margin-right:1px;
+width:700px;
+height:494px;
+max-height:494px;
+max-width:700px;
 overflow: auto;
+border-top-style: solid;
+border-top-color: #A3D18E;
+border-top-width: 6px;
 }
 #sidebar {
 padding-left: 5px;
 padding-right: 5px;
-border-right-style: solid;
-border-right-color: #A3D18E;
-border-right-width: 6px;
 height:500px;
 }
 .sidebar-container{
@@ -74,12 +79,17 @@ max-height:500px;
     border-width: 2px;
 	background-image: url("../img/background_fixed.png");
 	background-size: 100% 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 
 iframe{
 	overflow-x: hidden;
 	overflow-y: scroll;
+	width:700;
+	max-width:700;
+	height:493;
 	backgroundColor = rgba(255,255,255,0.5);
 }
 
