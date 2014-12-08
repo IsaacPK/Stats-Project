@@ -249,3 +249,8 @@ border-radius:6px;
 textarea{
 resize: none;
 }
+
+#logo{
+position: relative;
+right: 10px;
+top:20px;

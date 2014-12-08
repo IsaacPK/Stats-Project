@@ -12,6 +12,13 @@ body{
 	font-size: 100%;
 }
 
+#logo{
+position: relative;
+right: 10px;
+top:20px;
+
+
+}
 #header{
 	padding-left:10px;
 }
