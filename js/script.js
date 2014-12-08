@@ -152,6 +152,7 @@ function searchFor(){
  function overlay() {
 	el = document.getElementById("overlay");
 	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	document.getElementById("feedbackTextarea").value = "";
 }
 
 function myFunction(ev) {

@@ -8,7 +8,7 @@
 	<div class="header-container"><div id="header">
     <a href="main.html"><img src="img/Logo.png" alt="Logo" style="width:250px;height:42px"></a>
 	<input width="400" id="searchBar" type="text" placeholder="Enter query" onkeydown="myFunction(event);">
-	<input type=submit id="sendFeedback" class="button" value="Send Feedback"/>
+	<input type=submit id="sendFeedback" class="button" value="Send Feedback" onclick="overlay();"/>
 	<input type=submit id="backButton" class="button" value="Back" onclick="backButton();"/>
 	<img src="img/searchIcon.png" id="searchI" name="query" height="22" width="27" onclick="searchFor();">
 	</div></div><!--end header-->
@@ -84,7 +84,9 @@
 	</div><!--end body-->
 </div>
 <div id="overlay"><div class="modal">
-Click here to [<a href='#' onclick='overlay()'>close</a>]
+	<h1>Send Feedback</h1><br/>
+	<textarea id="feedbackTextarea" type=text cols="50" rows="8" placeholder="Enter comments here..."></textarea><br/>
+	<br/><input type=submit class="button" id="feedbackSubmit" value="Submit" onclick="overlay();"/>
 </div></div>
 </body>	
 </html>
