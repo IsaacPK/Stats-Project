@@ -115,7 +115,7 @@ function searchFor(searchTerm){
 	xmlHttp = new XMLHttpRequest();
 	
 	var cx = '014170545056911956546:khinlequpe4';
-    var key = 'AIzaSyBFa4kGpcVQfY-0IcSdF3bpxha3l0Cif_8';
+    var key = 'AIzaSyDDWWkXSEtV6C61SHdCQZoWaF6llsNr1R4';
     var callback = 'hndlr';
     var url = 'https://www.googleapis.com/customsearch/v1?key=' + key 
 				+ '&cx=' + cx + '&q=' + query 
