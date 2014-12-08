@@ -53,6 +53,10 @@ if(url === "pages/main.html")
 	document.getElementById("backButton").style.visibility = "hidden";
 	document.getElementById("sendFeedback").style.visibility = "hidden";
 }
+else if(url === "pages/searchResults.html"){
+	document.getElementById("backButton").style.visibility = "visible";
+	document.getElementById("sendFeedback").style.visibility = "hidden";
+}
 else
 {
 	document.getElementById("backButton").style.visibility = "visible";
@@ -124,6 +128,7 @@ function searchFor(){
 	xmlHttp.open("GET", url, true);
 	xmlHttp.send(null);
 	xmlHttp.onreadystatechange = hndlr;
+	searchBox.value="";
 }
 
 /*--handles response from google search--*/
@@ -134,6 +139,7 @@ function searchFor(){
 		 var JSONresponse = responseText.substr(22,responseText.length - 25);
 		 //console.log(JSONresponse);
 		 var response = JSON.parse(JSONresponse);
+		 console.log(responseText);
 		 if(response.items != null){
 			 for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
