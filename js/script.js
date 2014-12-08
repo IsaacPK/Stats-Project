@@ -141,6 +141,7 @@ function searchFor(searchTerm){
 			var html = "data:text/html;charset=utf-8,<head><base target='_parent' /></head>"/*document.getElementByTag("body").innerHTML = "";*/
 			for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
+				console.log(responseText);
 				var temphtml = "";
 				temphtml = "<br>" +'<a '+'href="search.html?a='+encodeURIComponent(item.htmlFormattedUrl)+'">'+ item.htmlTitle + "</a><br>" 
 																	+ item.htmlFormattedUrl + "<br>"
