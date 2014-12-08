@@ -165,7 +165,7 @@ max-height:500px;
 	margin-top: 15px;
 	font-family: accentFont;
 	color: rgb(36,93,144);
-	overflow:auto;
+	overflow-y:scroll;
 }
 
 #sideListContainer a {
