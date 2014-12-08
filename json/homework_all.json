@@ -1,6 +1,6 @@
 [
 	{
-		"topic":"BASIC CONCEPTS",
+		"topic":"BEGINNING CONCEPTS",
 		"subtopics":[
 		{
 			"name":"Mean",
@@ -28,19 +28,32 @@
 		}]
 	},
 	{
-		"topic":"ADVANCED CONCEPTS",
+		"topic":"PROBABILITY BASICS",
 		"subtopics":[
 		{
-			"name":"Subtopic 1",
-			"ref":""
+			"name":"Prior Distribution",
+			"ref":"pages/prior-distribution.html"
 		},
 		{
-			"name":"Subtopic 2",
-			"ref":""
+			"name":"Posterior Distribution",
+			"ref":"pages/posterior-distribution.html"
 		},
 		{
-			"name":"Subtopic 3",
-			"ref":""
+			"name":"Credible Interval",
+			"ref":"pages/credible-interval.html"
+		}]
+	},
+	{
+		"topic":"DISTRIBUTIONS",
+		"subtopics":[
+		{
+			"name":"Beta Distribution",
+			"ref":"pages/beta-distribution.html"
+		},
+		{
+			"name":"Gamma Distribution",
+			"ref":"pages/gamma-distribution.html"
 		}]
 	}
+	
 ]
