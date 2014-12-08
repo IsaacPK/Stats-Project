@@ -166,6 +166,7 @@ max-height:500px;
 	font-family: accentFont;
 	color: rgb(36,93,144);
 	overflow-y:auto;
+	max-height:450px;
 }
 
 #sideListContainer a {
