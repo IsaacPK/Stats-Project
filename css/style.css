@@ -178,7 +178,7 @@ max-height:500px;
 	padding: 0;	
 }
 
-#sidelistContainer {
+#sidelist {
 overflow-y:auto;
 }
 #sideList li {
