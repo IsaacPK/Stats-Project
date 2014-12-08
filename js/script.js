@@ -115,7 +115,7 @@ function searchFor(searchTerm){
 	xmlHttp = new XMLHttpRequest();
 	
 	var cx = '014170545056911956546:khinlequpe4';
-    var key = 'AIzaSyDDWWkXSEtV6C61SHdCQZoWaF6llsNr1R4';
+    var key = 'AIzaSyBFa4kGpcVQfY-0IcSdF3bpxha3l0Cif_8';
     var callback = 'hndlr';
     var url = 'https://www.googleapis.com/customsearch/v1?key=' + key 
 				+ '&cx=' + cx + '&q=' + query 
@@ -141,7 +141,7 @@ function searchFor(searchTerm){
 			document.getElementByTag("body").innerHTML = "";
 			for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
-				document.getElementByTag("body").innerHTML += "<br>" +item.htmlTitle + "<br>" 
+				document.getElementByTag("body").innerHTML += "<br>" +'<a target="_top" ' + 'href="../pages/searchResults.html?a='+encodeURIComponent(item.htmlFormattedUrl)+'">'+ item.htmlTitle + "</a><br>" 
 																	+ item.htmlFormattedUrl + "<br>"
 																	+ item.htmlSnippet + "<br>";
 				}	
