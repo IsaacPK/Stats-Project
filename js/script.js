@@ -166,3 +166,23 @@ function myFunction(ev) {
 function backButton(){
 	loadPage("pages/main.html");
 }
+
+//gets query value from url
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+//sets page to page in url and sizes iframe height
+function parsePageQuery(){	
+	var body = document.body,
+    html = document.documentElement;
+	var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+	document.getElementById("search_frame").style.height = height-170;
+	/*document.getElementsByTagName("body").style.height = height-200;*/
+	
+	document.getElementById("search_frame").src = getParameterByName("a");
+}

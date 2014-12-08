@@ -1,0 +1,31 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script language="javascript" type="text/javascript" src="js/script.js"></script>
+</head>
+<body onload="parsePageQuery();" style="overflow:hidden;height: 100%">
+<div>
+	<div class="search-header-container" style="background-image:url('img/background-cropped.png');background-size:100% auto;border-bottom-style: solid;border-bottom-color: #A3D18E;border-bottom-width: 6px;"><div id="search-header">
+    <a href="main.html"><img src="img/Logo.png" alt="Logo" style="width:250px;height:42px"></a>
+	<input width="400" id="searchBar" type="text" placeholder="Enter query" onkeydown="myFunction(event);">
+	<input type=submit style="visibility:visible;" id="sendFeedback" class="button" value="Send Feedback" onclick="overlay();"/>
+	<a href="main.html" style="text-decoration: none !important;"><input type=submit style="visibility:visible;" id="backButton" class="button" value="Back" /></a>
+	<img src="img/searchIcon.png" id="searchI" name="query" height="22" width="27" onclick="searchFor();">
+	</div></div><!--end header-->
+	<div id="body">
+		<iframe src="" name="search_frame" id="search_frame" frameborder="no" allowTransparency="true"></iframe>
+		</div></div><!--end main-->
+	</div><!--end body-->
+</div>
+<div id="overlay"><div class="modal">
+	<h1>Send Feedback</h1><br/>
+	<textarea id="feedbackTextarea" type=text cols="50" rows="8" placeholder="Enter comments here..."></textarea><br/>
+	<br/><input type=submit class="button" id="feedbackSubmit" value="Submit" onclick="overlay();"/>
+	<input type=submit class="button" id="feedbackSubmit" value="Cancel" onclick="overlay();"/>
+</div></div>
+</body>	
+</html>
+
+
+
+
