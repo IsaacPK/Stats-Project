@@ -65,7 +65,7 @@ else
 }
 
 function prepareSideList() {					//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
-	var list = document.querySelectorAll(".expandable");
+	var list = document.querySelectorAll("sideListContainer .expandable");
 	for (var i = 0; i < list.length; i++)
 	{
 		list[i].dataset.isExpanded = "true";
@@ -73,12 +73,58 @@ function prepareSideList() {					//Add event listeners to all items of class "ex
 	}
 }
 
+function prepareSearchTrends() {				//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
+	var list = document.querySelectorAll("#listContainer .expandable");
+	
+	hideList = [];
+	
+	for (var i = 0; i < list.length; i++)
+	{
+		list[i].dataset.isExpanded = "false";
+		list[i].addEventListener("click", function(event) { expand(event);}, false);
+			
+		var child = list[i].children;
+		
+		for(var k = 0; k < child.length; k++)
+		{
+			if(child[k].nodeType === 1 && child[k].tagName === "UL") {
+				hideList.push(child[k]);
+			}
+		}
+		
+		list[i].style.backgroundImage = "url(img/collapsedSm.png)";
+	}
+	
+	for ( var j = 0; j < hideList.length; j++)
+	{
+		hideList[j].style.display = "none";
+	}	
+}
+
 function expand(ev) {
-	var hideList = ev.target.querySelectorAll('ul');
+	ev.stopPropagation();
+
+	//alert("expand");
+	
+	//var hideList = ev.target.querySelectorAll(':scope > ul');
+	
+	var hideList = [];
+	
+	var children = ev.target.childNodes;
+	for(var i = 0, l=children.length; i<l; ++i) {
+		var child = children[i];
+		if(child.nodeType === 1 && child.tagName === "UL") {
+			hideList.push(child);
+		}
+	}
+	
+	//alert(hideList.length);
 	
 	if(ev.target.dataset.isExpanded == "true")	//Collapse a list topic
 	{
+		//alert("trying to collapse");
 		ev.target.dataset.isExpanded = "false";
+		//ev.target.style.backgroundColor = "red";
 		ev.target.style.backgroundImage = "url(img/collapsedSm.png)";
 		for ( var i = 0; i < hideList.length; i++)
 		{
@@ -87,7 +133,9 @@ function expand(ev) {
 	}
 	else if(ev.target.dataset.isExpanded == "false")	//can't just say "else" because sub menus have isExpanded == undefined
 	{
+		//alert("trying to expand");
 		ev.target.dataset.isExpanded = "true";	//Expand a list topic
+		//ev.target.style.backgroundColor = "blue";
 		ev.target.style.backgroundImage = "url(img/expandedSm.png)";
 		for ( var i = 0; i < hideList.length; i++)
 		{

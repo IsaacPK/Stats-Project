@@ -1,6 +1,11 @@
 /********************/
 /* GENERAL SETTINGS */
 /********************/
+@font-face {
+    font-family: accentFont;
+    src: url("../font/BritannicBold.ttf");
+}
+
 table{ background-color: #245d90ff;
 font-size: 15px;
 
@@ -120,4 +125,28 @@ body {
     background-color:#555555;
     color:#222222; 
     font-weight:normal;
+}
+
+#listContainer li {
+	background-position: left top;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+}
+
+td {
+	vertical-align: top;
+}
+
+th {
+	background-color: rgb(36,93,144);
+	color:	white;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-family: accentFont;
+	font-size: 110%;
+	font-weight: normal;
+}
+
+tr td:nth-child(2) { /* I don't think they are 0 based */
+   text-align: center;
 }

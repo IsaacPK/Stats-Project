@@ -1,277 +1,275 @@
 <head>
-       
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-       
-       <title>Search Trends</title>
-        <link rel="stylesheet" href="css/search-trends.css" type="text/css" media="screen, projection">
-        
-        <script type="text/javascript" src="js/jquery-search-trends.js">
-        
-        </script>
-        <script type="text/javascript" src="js/search-trendsjs.js">
-        </script>
-        </script>
-    </head>
-    <body>
-        <p id="heading">Search trends from <input id="searchTrend" type="text" value="Enter date"> to <input id="searchTrend" type="text" value="Enter date"></p>
-<input type=submit id="searchTerm" class="button" value="Search Term"/>
-<!-- <div class="listControl">
-                <a id="expandL" class="button">Expand All</a>
-                <a id="collapseL" class="button">Collapse All</a>
-            </div> -->
+	   
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	   
+	   <title>Search Trends</title>
+		<link rel="stylesheet" href="css/search-trends.css" type="text/css" media="screen, projection">
+		
+		<script language="javascript" type="text/javascript" src="js/script.js"></script>
 
+	</head>
+	<body onload="prepareSearchTrends();">
+		<p id="heading">Search trends from <input id="searchTrend" type="text" value="Enter date"> to <input id="searchTrend" type="text" value="Enter date"></p>
+<!--<input type=submit id="searchTerm" class="button" value="Search Term"/>
+ <div class="listControl">
+				<a id="expandL" class="button">Expand All</a>
+				<a id="collapseL" class="button">Collapse All</a>
+			</div> -->
+	
+	
 
-        <div id="listContainer">
-            
-            <ul id="expList">
-            <li>
-                    Histogram                                             
-                    <ul>
-                        <li>
-                            Stat151 - Histogram <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Histogram - Wikipedia <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px"> 
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Histogram - Math is Fun <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Calibration experiment
-                    <ul>
-                        <li>
-                            Stat151 - Calibration experiment <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                     <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Calibration experiment - Wikipedia <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                     <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Calibration experiment - Math is Fun <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                     <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Gibbs sampling
-                    <ul>
-                        <li>
-                            Stat151 - Gibbs sampling <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                     <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Gibbs sampling - Wikipedia <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Gibbs sampling - Math is Fun <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    R studio
-                    <ul>
-                        <li>
-                            Stat151 - R studio <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            R studio - Wikipedia <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            R studio - Math is Fun <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Poisson Distribution 
-                    <ul>
-                        <li>
-                            Stat151 - Poisson Distribution <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Poisson Distribution - Wikipedia <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Poisson Distribution - Math is Fun <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Conjugate Distribution 
-                    <ul>
-                        <li>
-                            Stat151 - Conjugate Distribution <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Conjugate Distribution - Wikipedia <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Conjugate Distribution - Math is Fun <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Beta-binomial 
-                    <ul>
-                        <li>
-                            Stat151 - Beta-binomial <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                     <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Beta-binomial - Wikipedia <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Beta-binomial - Math is Fun <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
-                            <ul>
-                                <li>
-                                    <span><p>Student 1 - I really like this source.</p></span>
-                                    <span><p>Student 13- I wish they were a little bit more understandable.</p></span>
-                                    <span><p>Student 32- I didn't like this page.</p></span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                
-            </ul>
-        
-        </div>
-    </body>
+	<div id="listContainer">
+	
+	<table width = "90%">
+	<tr><th width="60%">Search Term</td><th>Frequency</td></tr>
+	<tr><td>
+		<ul>
+			<li class="expandable">Histogram
+				<ul>
+					<li class="expandable">Stat151 - Histogram <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Histogram - Wikipedia <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px"> 
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Histogram - Math is Fun <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		<ul></td>
+		<td>25</td></tr>
+		<tr><td>
+		<ul>
+			<li class="expandable">Calibration experiment
+				<ul>
+					<li class="expandable">Stat151 - Calibration experiment <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Calibration experiment - Wikipedia <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Calibration experiment - Math is Fun <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul></td>
+		<td>21</td></tr>
+		<tr><td>
+		<ul>
+			<li class="expandable">Gibbs sampling
+				<ul>
+					<li class="expandable">Stat151 - Gibbs sampling <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Gibbs sampling - Wikipedia <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li class="expandable">
+					<li class="expandable">Gibbs sampling - Math is Fun <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul></td>
+		<td>14</td></tr>
+		<tr><td>
+		<ul>
+			<li class="expandable">R studio
+				<ul>
+					<li class="expandable">Stat151 - R studio <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">R studio - Wikipedia <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">R studio - Math is Fun <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul></td>
+		<td>10</td></tr>
+		<tr><td>
+		<ul>
+			<li class="expandable">Poisson Distribution 
+				<ul>
+					<li class="expandable">Stat151 - Poisson Distribution <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Poisson Distribution - Wikipedia <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Poisson Distribution - Math is Fun <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul></td>
+		<td>7</td></tr>
+		<tr><td>
+		<ul>
+			<li class="expandable">Conjugate Distribution 
+				<ul>
+					<li class="expandable">Stat151 - Conjugate Distribution <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Conjugate Distribution - Wikipedia <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Conjugate Distribution - Math is Fun <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul></td>
+		<td>5</td></tr>
+		<tr><td>
+		<ul>
+			<li class="expandable">Beta-binomial 
+				<ul>
+					<li class="expandable">Stat151 - Beta-binomial <img src="img/rat3.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Beta-binomial - Wikipedia <img src="img/rat1.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+					<li class="expandable">Beta-binomial - Math is Fun <img src="img/rat2.png" alt="thumbsup" style="width:75px;height:25px">
+						<ul>
+							<li>
+								<span><p>Student 1 - I really like this source.</p></span>
+								<span><p>Student 13- I wish they were a little bit more understandable.</p></span>
+								<span><p>Student 32- I didn't like this page.</p></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>	
+		</ul></td>
+		<td>3</td></tr>
+	</table>
+	
+	</div>
+	
+	</body>
 </html>
