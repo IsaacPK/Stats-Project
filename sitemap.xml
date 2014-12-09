@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+  <url>
+    <loc>http://www.example.com/foo.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/admin.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/main.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/search-trends.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/test.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/beta-distribution.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/credible-interval.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/gamma-distribution.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/histogram.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/percentile.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/posterior-distribution.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/prior-distribution.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/standard-deviation.html</loc>
+    <loc>students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/variance.html</loc>
+  </url>
+</urlset>
