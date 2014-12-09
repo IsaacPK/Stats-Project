@@ -65,19 +65,7 @@ else
 }
 
 function prepareSideList() {					//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
-	var list = document.querySelectorAll("sideListContainer .expandable");
-	for (var i = 0; i < list.length; i++)
-	{
-		list[i].dataset.isExpanded = "true";
-		list[i].addEventListener("click", function(event) { expand(event);}, false);
-	}
-}
-
-function prepareSearchTrends() {				//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
-	var list = document.querySelectorAll("#listContainer .expandable");
-	
-	hideList = [];
-	
+	var list = document.querySelectorAll("#sideListContainer .expandable");
 	for (var i = 0; i < list.length; i++)
 	{
 		list[i].dataset.isExpanded = "false";
@@ -88,17 +76,31 @@ function prepareSearchTrends() {				//Add event listeners to all items of class 
 		for(var k = 0; k < child.length; k++)
 		{
 			if(child[k].nodeType === 1 && child[k].tagName === "UL") {
-				hideList.push(child[k]);
+				child[k].style.display = "none";
 			}
 		}
-		
 		list[i].style.backgroundImage = "url(img/collapsedSm.png)";
 	}
-	
-	for ( var j = 0; j < hideList.length; j++)
+}
+
+function prepareSearchTrends() {				//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
+	var list = document.querySelectorAll("#listContainer .expandable");
+		
+	for (var i = 0; i < list.length; i++)
 	{
-		hideList[j].style.display = "none";
-	}	
+		list[i].dataset.isExpanded = "false";
+		list[i].addEventListener("click", function(event) { expand(event);}, false);
+			
+		var child = list[i].children;
+		
+		for(var k = 0; k < child.length; k++)
+		{
+			if(child[k].nodeType === 1 && child[k].tagName === "UL") {
+				child[k].style.display = "none";
+			}
+		}
+		list[i].style.backgroundImage = "url(img/collapsedSm.png)";
+	}
 }
 
 function expand(ev) {
