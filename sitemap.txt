@@ -1,0 +1,13 @@
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/admin.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/main.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/search-trends.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/test.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/beta-distribution.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/credible-interval.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/gamma-distribution.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/histogram.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/percentile.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/posterior-distribution.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/prior-distribution.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/standard-deviation.html
+http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/pages/variance.html
