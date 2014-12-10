@@ -63,8 +63,9 @@ for(var i = 0; i < list.length; i++)
 	list[i].style.color = "rgb(36,93,144)";
 }
 
-
-ev.target.style.color = "rgb(124,175,222)";
+if(ev != null){
+	ev.target.style.color = "rgb(124,175,222)";
+}
 document.getElementById("main_frame").src = url;
 
 
@@ -257,7 +258,7 @@ function doSearch(searchTerm){
 
 //called when back button is pressed
 function backButton(){
-	loadPage("pages/main.html");
+	loadPage("pages/main.html", null);
 }
 
 //gets query value from url
