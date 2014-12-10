@@ -31,9 +31,9 @@ function loadHomeworkList(myArr) {
 	if(pagetype == "teacher")
 	{
 		for(var i = 0; i < myArr.length; i++) {
-			output += '<li class="expandable">' + myArr[i].topic + '<img src="img/edit.png" alt="edit" style="width:20px;height:15px;"><ul>';
+			output += '<li class="expandable">' + myArr[i].topic + '<img src="img/edit2.png" alt="edit2" class="editButton"><ul>';
 			for(var j = 0; j < myArr[i].subtopics.length; j++) {
-				output += '<li><img src="img/edit.png" alt="edit" style="width:20px;height:15px;"><span onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\', event); return false;">' + myArr[i].subtopics[j].name + '</span></li>';
+				output += '<li><img src="img/edit2.png" alt="edit2" class="editButton"><span onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\', event); return false;">' + myArr[i].subtopics[j].name + '</span></li>';
 			}
 			output += '</ul></li>';
 		}

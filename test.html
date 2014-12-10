@@ -9,12 +9,11 @@
     <a href="main.html"><img id="logo" src="img/Logo.png" alt="Logo" style="width:250px;height:42px"></a>
 	<input width="400" id="searchBar" type="text" placeholder="Enter query" onkeydown="searchEnter(event);">
 	<input type=submit id="searchTrends" class="button" value="Search Trends" onclick="loadPage('search-trends.html', event); return false;"/>
-	<input type=submit id="sendFeedback" class="button" value="Send Feedback"/>
 	<input type=submit id="backButton" class="button" value="Back"/>
 	<img src="img/searchIcon.png" id="searchI" name="query" height="22" width="27" onclick="searchFor();">
 	</div></div><!--end header-->
 	<div id="body">
-		<div class="sidebar-container"><div id="sidebar">
+		<div class="sidebar-container">
 		<div id="homeworkSelectContainer">
 			&nbsp;Topics from Homework #
 			<select onchange="getHomeworkList(this.value);">
@@ -24,6 +23,8 @@
 				<option value="3">3</option>
 			</select>
 		</div>
+		<div id="sidebar">
+		
 		
 		<div id="sideListContainer">
 		</div>

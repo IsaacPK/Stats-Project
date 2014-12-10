@@ -116,15 +116,17 @@ border-top-width: 6px;
 padding-left: 5px;
 padding-right: 5px;
 height:500px;
-overflow:hidden;
+overflow: auto;
 }
+
 .sidebar-container{
 float:left;
-width:240px;
+width:248px;
+margin-left:6px;
 min-height:500px;
-overflow: hidden;
 max-height:500px;
 }
+
 #body{
 	width:auto;
 	height:100%;
@@ -201,6 +203,13 @@ overflow-y:auto;
 	font-size: .7em;
 }
 
+img.editButton{
+	width:16px;
+	height:16px;
+	float:right;
+	margin-top: 0em;
+} 
+
 #sideList > li > ul > li{
 	text-transform: none;
 }
@@ -218,10 +227,6 @@ overflow-y:auto;
 	padding-bottom: 4px;
 	font-family: accentFont;
 	font-size: 95%;
-}
-
-select {
-
 }
 
 #overlay {
@@ -262,3 +267,4 @@ resize: none;
 position: relative;
 right: 10px;
 top:20px;
+}

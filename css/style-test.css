@@ -38,7 +38,7 @@ top:20px;
     text-decoration: none;
     cursor: pointer;
     border-width:1px;
-	border-color:rgb(124,175,22);
+	border-color:rgb(124,175,222);
 	border-style:solid;
 	white-space: normal;
 }
@@ -48,7 +48,7 @@ top:20px;
 }
 
 #searchTrends{
-	right: 453px;
+	right: 280px;
 	top:13px;
 	width:80px;
 	height:50px;
@@ -111,14 +111,17 @@ border-top-width: 6px;
 padding-left: 5px;
 padding-right: 5px;
 height:500px;
+overflow: auto;
 }
+
 .sidebar-container{
 float:left;
-width:240px;
+width:248px;
+margin-left:6px;
 min-height:500px;
-overflow: auto;
 max-height:500px;
 }
+
 #body{
 	width:auto;
 	height:100%;
@@ -174,10 +177,15 @@ iframe{
 	background-repeat: no-repeat;
 	font-size: 1.2em;
 	cursor: pointer;
+	text-transform: Uppercase;
 }
 
 #sideList > li > ul {
 	font-size: .7em;
+}
+
+#sideList > li > ul > li{
+	text-transform: none;
 }
 
 #sideList .expandable  {
@@ -230,3 +238,9 @@ border-width:3px;
 
 }
 
+img.editButton{
+	width:20px;
+	height:16px;
+	float:right;
+	margin-top: 0.4em;
+} 
