@@ -71,6 +71,7 @@ body{
 	height:50px;
 	float:right;
 	visibility:hidden;
+	margin: 11px 15px 0px 10px;
 }
 
 #dislikeContainer{
@@ -80,6 +81,19 @@ body{
 	height:50px;
 	float:right;
 	visibility:hidden;
+	margin: 11px 90px 0px 15px;
+}
+
+#likeButton {
+	width:70px;
+	height:48px;
+	text-align:center;
+}
+
+#dislikeButton {
+	width:70px;
+	height:48px;
+	text-align:center;
 }
 
 #backButton{
@@ -108,7 +122,7 @@ body{
 
 #searchI {
 	position: relative;
-	right:-295px;
+	right:-567px;
 	top:26px;
 	float:right;
 }
