@@ -31,7 +31,7 @@ function loadHomeworkList(myArr) {
 	if(pagetype == "teacher")
 	{
 		for(var i = 0; i < myArr.length; i++) {
-			output += '<li class="expandable">' + myArr[i].topic + '<img src="img/edit2.png" alt="edit2" class="editButton" onclick="wysiwyg('+"'pages/histogram.html');'"+'><ul>';
+			output += '<li class="expandable">' + myArr[i].topic + '<img src="img/edit2.png" alt="edit2" class="editButton" onclick="wysiwyg(\'pages/histogram.html\');"><ul>';
 			for(var j = 0; j < myArr[i].subtopics.length; j++) {
 				output += '<li><img src="img/edit2.png" alt="edit2" class="editButton"><span onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\', event); return false;">' + myArr[i].subtopics[j].name + '</span></li>';
 			}
@@ -290,9 +290,9 @@ function wysiwyg(url){
 	{
 		loadPage(url,null);
 		var x = document.getElementById("main_frame").contentWindow.document.getElementByTag("body");
-        myNicEditor = new nicEditor();
-        myNicEditor.setPanel('Panel');
-        myNicEditor.addInstance(x);
+		myNicEditor = new nicEditor();
+		myNicEditor.setPanel('Panel');
+		myNicEditor.addInstance(x);
 	}
 }
 
