@@ -13,7 +13,7 @@ function loadHomeworkList(myArr) {
 	for(var i = 0; i < myArr.length; i++) {
 		output += '<li class="expandable">' + myArr[i].topic + '<ul>';
 		for(var j = 0; j < myArr[i].subtopics.length; j++) {
-			output += '<li><span><a href="" onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\'); return false;">' + myArr[i].subtopics[j].name + '</a></span></li>';
+			output += '<li><span onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\', event); return false;">' + myArr[i].subtopics[j].name + '</span></li>';
 		}
 		output += '</ul></li>';
 	}
@@ -34,20 +34,19 @@ function getHomeworkList(val)
 	xmlhttp.send();
 }
 
-function loadPage(url) {
-/*alert(url);*/
-/*var req = new XMLHttpRequest();
-req.open("GET", url, false);
-req.send(null);
-var page = req.responseText;*/
+function loadPage(url, ev) {
+
+var list = document.querySelectorAll("#sideListContainer li, span");
+for(var i = 0; i < list.length; i++)
+{
+	list[i].style.color = "rgb(36,93,144)";
+}
+
+
+ev.target.style.color = "rgb(124,175,222)";
 document.getElementById("main_frame").src = url;
-/*var cssLink = document.createElement("link") 
-cssLink.href = "css/pages.css";
-cssLink .rel = "stylesheet"; 
-cssLink .type = "text/css"; 
-frames['main_frame'].document.body.appendChild(cssLink);*/
-/*document.getElementById("main_frame").contentWindow.location.reload(true);*/
-//prepareSideList();
+
+
 if(url === "pages/main.html")
 {
 	document.getElementById("backButton").style.visibility = "hidden";
@@ -214,7 +213,7 @@ function searchFor(searchTerm){
 	document.getElementById("feedbackTextarea").value = "";
 }
 
-function myFunction(ev) {
+function searchEnter(ev) {
 	if(ev.which == 13)
 	{
 		search();
