@@ -291,12 +291,15 @@ function wysiwyg(url){
 	{
 		loadPage(url,null);
 		var iframe = document.getElementById('main_frame');
-		var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-		var x = innerDoc.getElementByTag("body");
-		alert("html= " + x.innerHTML);
-		myNicEditor = new nicEditor();
-		myNicEditor.setPanel('content');
-		myNicEditor.addInstance(x);
+		iframe.onload= function() {
+			var iframe = document.getElementById('main_frame');
+			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+			var x = innerDoc.getElementByTag("body");
+			alert("html= " + x.innerHTML);
+			myNicEditor = new nicEditor();
+			myNicEditor.setPanel('content');
+			myNicEditor.addInstance(x);
+		};
 	}
 }
 
