@@ -69,27 +69,39 @@ function loadPage(url, ev) {
 	
 	var backb = document.getElementById("backButton");
 	var sendf = document.getElementById("sendFeedback");
-	var likec = document.getElementById("likeContainer");
-	var dislc = document.getElementById("dislikeContainer");
 	if(url === "pages/main.html")
 	{
+<<<<<<< .merge_file_a02724
 		backb.style.visibility = "hidden";
 		if(sendf != null)sendf.style.visibility = "hidden";
-		if(likec != null)likec.style.visibility = "hidden";
-		if(dislc != null)dislc.style.visibility = "hidden";
 	}
 	else if(url === "pages/searchResults.html"){
 		backb.style.visibility = "visible";
 		if(sendf != null)sendf.style.visibility = "hidden";
-		if(likec != null)likec.style.visibility = "hidden";
-		if(dislc != null)dislc.style.visibility = "hidden";
 	}
 	else
 	{
 		backb.style.visibility = "visible";
 		if(sendf != null)sendf.style.visibility = "visible";
-		if(likec != null)likec.style.visibility = "visible";
-		if(dislc != null)dislc.style.visibility = "visible";
+=======
+		document.getElementById("backButton").style.visibility = "hidden";
+		document.getElementById("sendFeedback").style.visibility = "hidden";
+		document.getElementById("likeContainer").style.visibility = "hidden";
+		document.getElementById("dislikeContainer").style.visibility = "hidden";
+	}
+	else if(url === "pages/searchResults.html"){
+		document.getElementById("backButton").style.visibility = "visible";
+		document.getElementById("sendFeedback").style.visibility = "hidden";
+		document.getElementById("likeContainer").style.visibility = "hidden";
+		document.getElementById("dislikeContainer").style.visibility = "hidden";
+	}
+	else
+	{
+		document.getElementById("backButton").style.visibility = "visible";
+		document.getElementById("sendFeedback").style.visibility = "visible";
+		document.getElementById("likeContainer").style.visibility = "visible";
+		document.getElementById("dislikeContainer").style.visibility = "visible";
+>>>>>>> .merge_file_a01812
 	}
 }
 
@@ -312,11 +324,11 @@ function wysiwyg(url){
 		loadPage(url,null);
 		var iframe = document.getElementById('main_frame');
 		var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-		//var x = innerDoc.getElementByTag("body");
-		//alert("html= " + x.innerHTML);
+		var x = innerDoc.getElementByTag("body");
+		alert("html= " + x.innerHTML);
 		myNicEditor = new nicEditor();
 		myNicEditor.setPanel('content');
-		myNicEditor.addInstance(document.getElementById('content'));
+		myNicEditor.addInstance(x);
 	}
 }
 
