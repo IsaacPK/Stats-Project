@@ -69,7 +69,11 @@ function loadPage(url, ev) {
 		ev.target.style.color = "rgb(124,175,222)";
 	}
 	document.getElementById("main_frame").src = url;
-	if(niceditInstance != null)niceditInstance.removeInstance('content');
+	if(niceditInstance != null)
+	{
+		niceditInstance.removeInstance('content');
+		niceditInstance.removePanel('content');
+	}
 	
 	var backb = document.getElementById("backButton");
 	var sendf = document.getElementById("sendFeedback");
