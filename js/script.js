@@ -31,7 +31,7 @@ function loadHomeworkList(myArr) {
 	if(pagetype == "teacher")
 	{
 		for(var i = 0; i < myArr.length; i++) {
-			output += '<li class="expandable">' + myArr[i].topic + '<img src="img/edit2.png" alt="edit2" class="editButton"><ul>';
+			output += '<li class="expandable">' + myArr[i].topic + '<img src="img/edit2.png" alt="edit2" class="editButton" onclick="wysiwyg('+"'pages/histogram.html');'"+'><ul>';
 			for(var j = 0; j < myArr[i].subtopics.length; j++) {
 				output += '<li><img src="img/edit2.png" alt="edit2" class="editButton"><span onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\', event); return false;">' + myArr[i].subtopics[j].name + '</span></li>';
 			}
@@ -56,33 +56,32 @@ function getHomeworkList(val)
 }
 
 function loadPage(url, ev) {
+	var list = document.querySelectorAll("#sideListContainer li, span");
+	for(var i = 0; i < list.length; i++)
+	{
+		list[i].style.color = "rgb(36,93,144)";
+	}
 
-var list = document.querySelectorAll("#sideListContainer li, span");
-for(var i = 0; i < list.length; i++)
-{
-	list[i].style.color = "rgb(36,93,144)";
-}
-
-if(ev != null){
-	ev.target.style.color = "rgb(124,175,222)";
-}
-document.getElementById("main_frame").src = url;
+	if(ev != null){
+		ev.target.style.color = "rgb(124,175,222)";
+	}
+	document.getElementById("main_frame").src = url;
 
 
-if(url === "pages/main.html")
-{
-	document.getElementById("backButton").style.visibility = "hidden";
-	document.getElementById("sendFeedback").style.visibility = "hidden";
-}
-else if(url === "pages/searchResults.html"){
-	document.getElementById("backButton").style.visibility = "visible";
-	document.getElementById("sendFeedback").style.visibility = "hidden";
-}
-else
-{
-	document.getElementById("backButton").style.visibility = "visible";
-	document.getElementById("sendFeedback").style.visibility = "visible";
-}
+	if(url === "pages/main.html")
+	{
+		document.getElementById("backButton").style.visibility = "hidden";
+		document.getElementById("sendFeedback").style.visibility = "hidden";
+	}
+	else if(url === "pages/searchResults.html"){
+		document.getElementById("backButton").style.visibility = "visible";
+		document.getElementById("sendFeedback").style.visibility = "hidden";
+	}
+	else
+	{
+		document.getElementById("backButton").style.visibility = "visible";
+		document.getElementById("sendFeedback").style.visibility = "visible";
+	}
 }
 
 function prepareSideList() {					//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
@@ -280,3 +279,20 @@ function parsePageQuery(){
 	
 	document.getElementById("search_frame").src = getParameterByName("a");
 }
+
+//loads wysiwyg for specified url. url="" means new page
+function wysiwyg(url = ""){
+	if(url === "")
+	{
+		
+	}
+	else
+	{
+		loadPage(url,null);
+		var x = document.getElementById("main_frame").contentWindow.document.getElementByTag("body");
+        myNicEditor = new nicEditor();
+        myNicEditor.setPanel('Panel');
+        myNicEditor.addInstance(x);
+	}
+}
+
