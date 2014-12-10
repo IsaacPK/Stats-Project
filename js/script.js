@@ -288,9 +288,9 @@ function wysiwyg(url){
 	}
 	else
 	{
-		alert("wysiwyg");
-		loadPage("",null);
+		loadPage(url,null);
 		var x = document.getElementById("main_frame").contentWindow.document.getElementByTag("body");
+		alert(x.innerHTML);
 		myNicEditor = new nicEditor();
 		myNicEditor.setPanel('content');
 		myNicEditor.addInstance(x);
