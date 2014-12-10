@@ -322,7 +322,7 @@ function wysiwyg(url){
 		var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 		//var x = innerDoc.getElementByTag("body");
 		//alert("html= " + x.innerHTML);
-		niceditInstance = new nicEditor();
+		niceditInstance = new nicEditor({maxWidth : 700});
 		niceditInstance.setPanel('content');
 		niceditInstance.addInstance('content');
 	}
