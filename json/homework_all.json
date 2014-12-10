@@ -1,6 +1,6 @@
 [
 	{
-		"topic":"BEGINNING CONCEPTS",
+		"topic":"Beginning Concepts",
 		"subtopics":[
 		{
 			"name":"Mean",
@@ -28,7 +28,7 @@
 		}]
 	},
 	{
-		"topic":"PROBABILITY BASICS",
+		"topic":"Probability Basics",
 		"subtopics":[
 		{
 			"name":"Prior Distribution",
@@ -44,7 +44,7 @@
 		}]
 	},
 	{
-		"topic":"DISTRIBUTIONS",
+		"topic":"Distributions",
 		"subtopics":[
 		{
 			"name":"Beta Distribution",

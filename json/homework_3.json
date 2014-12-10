@@ -1,6 +1,6 @@
 [
 	{
-		"topic":"QUESTION 1",
+		"topic":"Question 1",
 		"subtopics":[
 		{
 			"name":"Mean",
@@ -16,7 +16,7 @@
 		}]
 	},
 	{
-		"topic":"QUESTION 2",
+		"topic":"Question 2",
 		"subtopics":[
 		{
 			"name":"Mean",
@@ -28,7 +28,7 @@
 		}]
 	},
 	{
-		"topic":"QUESTION 3",
+		"topic":"Question 3",
 		"subtopics":[
 		{
 			"name":"Mean",
@@ -40,7 +40,7 @@
 		}]
 	},
 	{
-		"topic":"QUESTION 4",
+		"topic":"Question 4",
 		"subtopics":[
 		{
 			"name":"Mean",
@@ -52,7 +52,7 @@
 		}]
 	},
 	{
-		"topic":"QUESTION 5",
+		"topic":"Question 5",
 		"subtopics":[
 		{
 			"name":"Beta Distribution",
