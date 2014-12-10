@@ -69,24 +69,25 @@ function loadPage(url, ev) {
 	
 	var backb = document.getElementById("backButton");
 	var sendf = document.getElementById("sendFeedback");
+	var likec = document.getElementById("likeContainer");
 	if(url === "pages/main.html")
 	{
 		backb.style.visibility = "hidden";
 		if(sendf != null)sendf.style.visibility = "hidden";
-		document.getElementById("likeContainer").style.visibility = "hidden";
+		if(likec != null)likec.style.visibility = "hidden";
 		document.getElementById("dislikeContainer").style.visibility = "hidden";
 	}
 	else if(url === "pages/searchResults.html"){
 		backb.style.visibility = "visible";
 		if(sendf != null)sendf.style.visibility = "hidden";
-		document.getElementById("likeContainer").style.visibility = "hidden";
+		if(likec != null)likec.style.visibility = "hidden";
 		document.getElementById("dislikeContainer").style.visibility = "hidden";
 	}
 	else
 	{
 		backb.style.visibility = "visible";
 		if(sendf != null)sendf.style.visibility = "visible";
-		document.getElementById("likeContainer").style.visibility = "visible";
+		if(likec != null)likec.style.visibility = "visible";
 		document.getElementById("dislikeContainer").style.visibility = "visible";
 	}
 }
