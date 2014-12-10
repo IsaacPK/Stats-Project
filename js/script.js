@@ -66,21 +66,22 @@ function loadPage(url, ev) {
 		ev.target.style.color = "rgb(124,175,222)";
 	}
 	document.getElementById("main_frame").src = url;
-
-
+	
+	var backb = document.getElementById("backButton");
+	var sendf = document.getElementById("sendFeedback");
 	if(url === "pages/main.html")
 	{
-		document.getElementById("backButton").style.visibility = "hidden";
-		document.getElementById("sendFeedback").style.visibility = "hidden";
+		backb.style.visibility = "hidden";
+		if(sendf.value != undefined)sendf.style.visibility = "hidden";
 	}
 	else if(url === "pages/searchResults.html"){
-		document.getElementById("backButton").style.visibility = "visible";
-		document.getElementById("sendFeedback").style.visibility = "hidden";
+		backb.style.visibility = "visible";
+		if(sendf.value != undefined)sendf.style.visibility = "hidden";
 	}
 	else
 	{
-		document.getElementById("backButton").style.visibility = "visible";
-		document.getElementById("sendFeedback").style.visibility = "visible";
+		backb.style.visibility = "visible";
+		if(sendf.value != undefined)sendf.style.visibility = "visible";
 	}
 }
 
@@ -289,6 +290,7 @@ function wysiwyg(url){
 	else
 	{
 		loadPage(url,null);
+		alert("test");
 		var x = document.getElementById("main_frame").contentWindow.document.getElementByTag("body");
 		alert("html= " + x.innerHTML);
 		myNicEditor = new nicEditor();
