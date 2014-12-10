@@ -73,16 +73,34 @@ function loadPage(url, ev) {
 	{
 		backb.style.visibility = "hidden";
 		if(sendf != null)sendf.style.visibility = "hidden";
+		document.getElementById("likeContainer").style.visibility = "hidden";
+		document.getElementById("dislikeContainer").style.visibility = "hidden";
 	}
 	else if(url === "pages/searchResults.html"){
 		backb.style.visibility = "visible";
 		if(sendf != null)sendf.style.visibility = "hidden";
+		document.getElementById("likeContainer").style.visibility = "hidden";
+		document.getElementById("dislikeContainer").style.visibility = "hidden";
 	}
 	else
 	{
 		backb.style.visibility = "visible";
 		if(sendf != null)sendf.style.visibility = "visible";
+		document.getElementById("likeContainer").style.visibility = "visible";
+		document.getElementById("dislikeContainer").style.visibility = "visible";
 	}
+}
+
+function likeUp() {
+	var out = document.getElementById("likeDisplay");
+	var currentValue = parseInt(out.innerHTML);
+	out.innerHTML = currentValue + 1;
+}
+
+function dislikeUp() {
+	var out = document.getElementById("dislikeDisplay");
+	var currentValue = parseInt(out.innerHTML);
+	out.innerHTML = currentValue + 1;
 }
 
 function prepareSideList() {					//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
