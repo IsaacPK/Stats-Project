@@ -185,9 +185,9 @@ function searchFor(searchTerm){
 	xmlHttp = new XMLHttpRequest();
 	
 	var cx = '014170545056911956546:khinlequpe4';
-    var key = 'AIzaSyDDWWkXSEtV6C61SHdCQZoWaF6llsNr1R4';
-    var callback = 'hndlr';
-    var url = 'https://www.googleapis.com/customsearch/v1?key=' + key 
+	var key = 'AIzaSyDDWWkXSEtV6C61SHdCQZoWaF6llsNr1R4';
+	var callback = 'hndlr';
+	var url = 'https://www.googleapis.com/customsearch/v1?key=' + key 
 				+ '&cx=' + cx + '&q=' + query 
 				+ '&callback=' + callback;
 	console.log(url);
@@ -262,18 +262,18 @@ function backButton(){
 
 //gets query value from url
 function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
 //sets page to page in url and sizes iframe height
 function parsePageQuery(){	
 	var body = document.body,
-    html = document.documentElement;
+	html = document.documentElement;
 	var height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+					html.clientHeight, html.scrollHeight, html.offsetHeight );
 	document.getElementById("search_frame").style.height = height-170;
 	/*document.getElementsByTagName("body").style.height = height-200;*/
 	
@@ -288,7 +288,7 @@ function wysiwyg(url){
 	}
 	else
 	{
-		loadPage(url,null);
+		loadPage("",null);
 		var x = document.getElementById("main_frame").contentWindow.document.getElementByTag("body");
 		myNicEditor = new nicEditor();
 		myNicEditor.setPanel('content');
