@@ -288,6 +288,7 @@ function wysiwyg(url){
 	}
 	else
 	{
+		alert("wysiwyg");
 		loadPage("",null);
 		var x = document.getElementById("main_frame").contentWindow.document.getElementByTag("body");
 		myNicEditor = new nicEditor();
