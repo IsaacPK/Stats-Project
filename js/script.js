@@ -103,8 +103,8 @@ function loadPage(url, ev) {
 }
 
 function updateLikes(url){
-	var likes = hashcode(url);
-	var dislikes = hashcode(url.split("").reverse().join(""));
+	var likes = hashcode(url)%10;
+	var dislikes = hashcode(url.split("").reverse().join(""))%10;
 	document.getElementById("likeDisplay").innerHTML = likes;
 	document.getElementById("dislikeDisplay").innerHTML = dislikes;;
 }
