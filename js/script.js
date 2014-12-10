@@ -1,8 +1,15 @@
 var xmlhttp = new XMLHttpRequest();
 
+var pagetype;
+
+function setPageType(type) {
+	pagetype = type;
+}
+
 xmlhttp.onreadystatechange = function() {
 	//if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 		var myArr = JSON.parse(xmlhttp.responseText);
+	
 		loadHomeworkList(myArr);
 	//}
 }
@@ -10,12 +17,26 @@ xmlhttp.onreadystatechange = function() {
 function loadHomeworkList(myArr) {
 	var output = '<ul id="sideList">';
 	
-	for(var i = 0; i < myArr.length; i++) {
-		output += '<li class="expandable">' + myArr[i].topic + '<ul>';
-		for(var j = 0; j < myArr[i].subtopics.length; j++) {
-			output += '<li><span onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\', event); return false;">' + myArr[i].subtopics[j].name + '</span></li>';
+	if(pagetype == "student")
+	{
+		for(var i = 0; i < myArr.length; i++) {
+			output += '<li class="expandable">' + myArr[i].topic + '<ul>';
+			for(var j = 0; j < myArr[i].subtopics.length; j++) {
+				output += '<li><span onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\', event); return false;">' + myArr[i].subtopics[j].name + '</span></li>';
+			}
+			output += '</ul></li>';
 		}
-		output += '</ul></li>';
+	}
+	
+	if(pagetype == "teacher")
+	{
+		for(var i = 0; i < myArr.length; i++) {
+			output += '<li class="expandable">' + myArr[i].topic + '<img src="img/edit.png" alt="edit" style="width:20px;height:15px;"><ul>';
+			for(var j = 0; j < myArr[i].subtopics.length; j++) {
+				output += '<li><img src="img/edit.png" alt="edit" style="width:20px;height:15px;"><span onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\', event); return false;">' + myArr[i].subtopics[j].name + '</span></li>';
+			}
+			output += '</ul></li>';
+		}
 	}
 	
 	output += '</ul>';
