@@ -281,7 +281,7 @@ function parsePageQuery(){
 }
 
 //loads wysiwyg for specified url. url="" means new page
-function wysiwyg(url = ""){
+function wysiwyg(url){
 	if(url === "")
 	{
 		
