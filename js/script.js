@@ -291,7 +291,7 @@ function wysiwyg(url){
 		loadPage(url,null);
 		var x = document.getElementById("main_frame").contentWindow.document.getElementByTag("body");
 		myNicEditor = new nicEditor();
-		myNicEditor.setPanel('Panel');
+		myNicEditor.setPanel('content');
 		myNicEditor.addInstance(x);
 	}
 }
