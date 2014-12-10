@@ -2,6 +2,8 @@ var xmlhttp = new XMLHttpRequest();
 
 var pagetype;
 
+var niceditInstance;
+
 function setPageType(type) {
 	pagetype = type;
 }
@@ -31,9 +33,9 @@ function loadHomeworkList(myArr) {
 	if(pagetype == "teacher")
 	{
 		for(var i = 0; i < myArr.length; i++) {
-			output += '<li class="expandable">' + myArr[i].topic + '<img src="img/edit2.png" alt="edit2" class="editButton" onclick="wysiwyg(\'pages/histogram.html\');"><ul>';
+			output += '<li class="expandable">' + myArr[i].topic + '<img src="img/edit2.png" alt="edit2" class="editButton");"><ul>';
 			for(var j = 0; j < myArr[i].subtopics.length; j++) {
-				output += '<li><img src="img/edit2.png" alt="edit2" class="editButton"><span onclick="loadPage(\'' + myArr[i].subtopics[j].ref + '\', event); return false;">' + myArr[i].subtopics[j].name + '</span></li>';
+				output += '<li><img src="img/edit2.png" alt="edit2" class="editButton"><span onclick="wysiwyg(\'' + myArr[i].subtopics[j].ref + '\', null); return false;">' + myArr[i].subtopics[j].name + '</span></li>';
 			}
 			output += '</ul></li>';
 		}
@@ -55,6 +57,7 @@ function getHomeworkList(val)
 	xmlhttp.send();
 }
 
+
 function loadPage(url, ev) {
 	var list = document.querySelectorAll("#sideListContainer li, span");
 	for(var i = 0; i < list.length; i++)
@@ -66,6 +69,7 @@ function loadPage(url, ev) {
 		ev.target.style.color = "rgb(124,175,222)";
 	}
 	document.getElementById("main_frame").src = url;
+	if(niceditInstance != null)niceditInstance.removeInstance('content');
 	
 	var backb = document.getElementById("backButton");
 	var sendf = document.getElementById("sendFeedback");
@@ -314,9 +318,9 @@ function wysiwyg(url){
 		var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 		//var x = innerDoc.getElementByTag("body");
 		//alert("html= " + x.innerHTML);
-		myNicEditor = new nicEditor();
-		myNicEditor.setPanel('content');
-		myNicEditor.addInstance(document.getElementById('content'));
+		niceditInstance = new nicEditor();
+		niceditInstance.setPanel('content');
+		niceditInstance.addInstance('content');
 	}
 }
 
