@@ -88,12 +88,14 @@ body{
 	width:70px;
 	height:48px;
 	text-align:center;
+	font-family: Arial;
 }
 
 #dislikeButton {
 	width:70px;
 	height:48px;
 	text-align:center;
+	font-family: Arial;
 }
 
 #backButton{
