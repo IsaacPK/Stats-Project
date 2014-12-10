@@ -315,7 +315,6 @@ function wysiwyg(url){
 		myNicEditor = new nicEditor();
 		myNicEditor.setPanel('content');
 		myNicEditor.addInstance(document.getElementById('content'));
-		};
 	}
 }
 
