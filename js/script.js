@@ -290,8 +290,9 @@ function wysiwyg(url){
 	else
 	{
 		loadPage(url,null);
-		alert("test");
-		var x = document.getElementById("main_frame").contentWindow.document.getElementByTag("body");
+		var iframe = document.getElementById('main_frame');
+		var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+		var x = innerDoc.getElementByTag("body");
 		alert("html= " + x.innerHTML);
 		myNicEditor = new nicEditor();
 		myNicEditor.setPanel('content');
