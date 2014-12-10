@@ -98,7 +98,26 @@ function loadPage(url, ev) {
 		if(sendf != null)sendf.style.visibility = "visible";
 		if(likec != null)likec.style.visibility = "visible";
 		if(dislc != null)dislc.style.visibility = "visible";
+		updateLikes(url);
 	}
+}
+
+function updateLikes(url){
+	var likes = hashcode(url);
+	var dislikes = hashcode(url.split("").reverse().join(""););
+	document.getElementById("likeDisplay").innerHTML = likes;
+	document.getElementById("dislikeDisplay").innerHTML = dislikes;;
+}
+
+function hashcode(str){
+	var hash = 0;
+	if (str.length == 0) return hash;
+	for (i = 0; i < str.length; i++) {
+		char = str.charCodeAt(i);
+		hash = ((hash<<5)-hash)+char;
+		hash = hash & hash; // Convert to 32bit integer
+	}
+	return hash;
 }
 
 function likeUp() {
