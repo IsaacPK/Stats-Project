@@ -72,16 +72,16 @@ function loadPage(url, ev) {
 	if(url === "pages/main.html")
 	{
 		backb.style.visibility = "hidden";
-		if(sendf.value != undefined)sendf.style.visibility = "hidden";
+		if(sendf != null)sendf.style.visibility = "hidden";
 	}
 	else if(url === "pages/searchResults.html"){
 		backb.style.visibility = "visible";
-		if(sendf.value != undefined)sendf.style.visibility = "hidden";
+		if(sendf != null)sendf.style.visibility = "hidden";
 	}
 	else
 	{
 		backb.style.visibility = "visible";
-		if(sendf.value != undefined)sendf.style.visibility = "visible";
+		if(sendf != null)sendf.style.visibility = "visible";
 	}
 }
 
