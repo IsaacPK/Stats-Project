@@ -4,6 +4,9 @@ var pagetype;
 
 var niceditInstance;
 
+var liked = false;
+var disliked = false;
+
 function setPageType(type) {
 	pagetype = type;
 }
@@ -100,6 +103,9 @@ function loadPage(url, ev) {
 		if(dislc != null)dislc.style.visibility = "visible";
 		updateLikes(url);
 	}
+	
+	liked = false;
+	disliked = false;
 }
 
 function updateLikes(url){
@@ -121,15 +127,35 @@ function hashcode(str){
 }
 
 function likeUp() {
-	var out = document.getElementById("likeDisplay");
-	var currentValue = parseInt(out.innerHTML);
-	out.innerHTML = currentValue + 1;
+	var out, currentValue;
+	if(! liked) {
+		out = document.getElementById("likeDisplay");
+		currentValue = parseInt(out.innerHTML);
+		out.innerHTML = currentValue + 1;
+		liked = true;
+	}
+	if(disliked) {
+		out = document.getElementById("dislikeDisplay");
+		currentValue = parseInt(out.innerHTML);
+		out.innerHTML = currentValue - 1;
+		disliked = false;
+	}
 }
 
 function dislikeUp() {
-	var out = document.getElementById("dislikeDisplay");
-	var currentValue = parseInt(out.innerHTML);
-	out.innerHTML = currentValue + 1;
+	var out, currentValue;
+	if(! disliked) {
+		out = document.getElementById("dislikeDisplay");
+		currentValue = parseInt(out.innerHTML);
+		out.innerHTML = currentValue + 1;
+		disliked = true;
+	}
+	if(liked) {
+		out = document.getElementById("likeDisplay");
+		currentValue = parseInt(out.innerHTML);
+		out.innerHTML = currentValue - 1;
+		liked = false;
+	}
 }
 
 function prepareSideList() {					//Add event listeners to all items of class "expandable" so when you click they execute the "expand" function
