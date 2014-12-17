@@ -65,37 +65,31 @@ body{
 }
 
 #likeContainer{
-	right: 60px;
-	top:13px;
 	width:70px;
 	height:50px;
 	float:right;
 	visibility:hidden;
-	margin: 11px 15px 0px 10px;
+	margin: 16px 18px 0px 10px;
 }
 
-#dislikeContainer{
-	right: 50px;
-	top:13px;
+#dislikeContainer {
 	width:70px;
 	height:50px;
 	float:right;
 	visibility:hidden;
-	margin: 11px 90px 0px 15px;
+	margin: 16px 100px 0px 15px;
 }
 
-#likeButton {
-	width:70px;
-	height:48px;
-	text-align:center;
-	font-family: Arial;
+#likeDisplay {
+	position: relative;
+	right: 32px;
+	z-index: 901;
 }
 
-#dislikeButton {
-	width:70px;
-	height:48px;
-	text-align:center;
-	font-family: Arial;
+#dislikeDisplay {
+	position: relative;
+	right:32px;
+	z-index:901;
 }
 
 #backButton{
