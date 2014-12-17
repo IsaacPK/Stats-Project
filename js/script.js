@@ -282,15 +282,16 @@ function searchFor(searchTerm){
 		 var response = JSON.parse(JSONresponse);
 		 console.log(responseText);
 		 if(response.items != null){
-			var html = "data:text/html;charset=utf-8,"+ encodeURI("<head><base href='http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/' target='_top' /><link rel='stylesheet' type='text/css' href='css/gibbsStyle.css'></head>");/*document.getElementByTag("body").innerHTML = "";*/
+			var html = "data:text/html;charset=utf-8,"+ encodeURI("<head><base href='http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/' target='_top' /><link rel='stylesheet' type='text/css' href='css/gibbsStyle.css'></head><table>");/*document.getElementByTag("body").innerHTML = "";*/
 			for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
 				console.log(responseText);
 				var temphtml = "";
-				temphtml = "<br>" +'<li class="b_algo"><h2><a target="_top" '+'href="search.html?a='+encodeURIComponent(item.link)+'">'+ item.htmlTitle + "</a></h2>" 
-																	+"<cite>" + item.htmlFormattedUrl + "</cite><br>"
-																	+ item.htmlSnippet + "<br>";
-				html += encodeURI(temphtml);
+				temphtml = "<tr><td>" +'<li class="b_algo"><h2><a target="_top" '+'href="search.html?a='+encodeURIComponent(item.link)+'">'+ item.htmlTitle + "</a></h2>" 
+				+"<cite>" + item.htmlFormattedUrl + "</cite><br>"
+				+ item.htmlSnippet
+				+ "</td><td width=\"110\"><img src=\"img/rat3.png\" style=\"width:75px;height:25px\"></td></tr>";
+				html += encodeURI(temphtml) + "</table>";
 				}
 			document.getElementById("main_frame").src = html;
 		 }else{
@@ -371,5 +372,21 @@ function wysiwyg(url){
 		niceditInstance.setPanel('content');
 		niceditInstance.addInstance('content');
 	}
+}
+
+function likehover(ele){
+	ele.src="img/thumbsupHover.png";
+}
+
+function likeoff(ele){
+	ele.src="img/thumbsup.png";
+}
+
+function dislikehover(ele){
+	ele.src="img/thumbsdownHover.png";
+}
+
+function dislikeoff(ele){
+	ele.src="img/thumbsdown.png";
 }
 
