@@ -282,7 +282,8 @@ function searchFor(searchTerm){
 		 var response = JSON.parse(JSONresponse);
 		 console.log(responseText);
 		 if(response.items != null){
-			var html = "data:text/html;charset=utf-8,"+ encodeURI("<head><base href='http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/' target='_top' /><link rel='stylesheet' type='text/css' href='css/gibbsStyle.css'></head><table>");/*document.getElementByTag("body").innerHTML = "";*/
+			var html = "data:text/html;charset=utf-8,"+ encodeURI("<head><base href='http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/' target='_top' /><link rel='stylesheet' type='text/css' href='css/gibbsStyle.css'></head>");
+			html += '<h2 style="text-align:center">Statistics Database Results</h2><table><tr><td><li class="b_algo"><h2><a target="_top" href="pages/test.html"> Mean </a></h2>Mean Definition The mean is a numerical measure of the central location of a group of data values. It is the sum of all values divided by the data count... </td><td><img src="img/rat2.png" style="width:120px;height:40px"></td></tr></table><br><br><h2 style="text-align:center">Additional Google Results</h2><table>';
 			for (var i = 0; i < response.items.length; i++) {
 				var item = response.items[i];
 				console.log(responseText);
@@ -290,12 +291,13 @@ function searchFor(searchTerm){
 				temphtml = "<tr><td>" +'<li class="b_algo"><h2><a target="_top" '+'href="search.html?a='+encodeURIComponent(item.link)+'">'+ item.htmlTitle + "</a></h2>" 
 				+"<cite>" + item.htmlFormattedUrl + "</cite><br>"
 				+ item.htmlSnippet
-				+ "</td><td width=\"110\"><img src=\"img/rat3.png\" style=\"width:75px;height:25px\"></td></tr>";
+				+ "</td><td><img src=\"img/rat3.png\" style=\"width:120px;height:40px\"></td></tr>";
 				html += encodeURI(temphtml) + "</table>";
 				}
 			document.getElementById("main_frame").src = html;
 		 }else{
-			alert("Search Error");
+			alert("Search Error.  Displaying Example Search Result.");
+			document.getElementById("main_frame").src = "searchExample.html";
 			/*loadPage('pages/gibbs_results.html');*/
 		 } 
 	 }  
