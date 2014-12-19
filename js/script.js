@@ -296,7 +296,7 @@ function searchFor(searchTerm){
 				}
 			document.getElementById("main_frame").src = html;
 		 }else{
-			alert("Search Error.  Displaying Example Search Result.");
+			//alert("Search Error.  Displaying Example Search Result.");
 			document.getElementById("main_frame").src = "searchExample.html";
 			/*loadPage('pages/gibbs_results.html');*/
 		 } 
