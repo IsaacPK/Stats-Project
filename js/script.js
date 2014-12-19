@@ -281,7 +281,7 @@ function searchFor(searchTerm){
 		 //console.log(JSONresponse);
 		 var response = JSON.parse(JSONresponse);
 		 console.log(responseText);
-		 loadPage(searchExample.html);
+		 loadPage('searchExample.html');
 		 /*if(response.items != null){
 			var html = "data:text/html;charset=utf-8,"+ encodeURI("<head><base href='http://students.cs.byu.edu/~RPFrame/thundercatz/Stats-Project/' target='_top' /><link rel='stylesheet' type='text/css' href='css/gibbsStyle.css'></head>");
 			html += '<h2 style="text-align:center">Statistics Database Results</h2><table><tr><td><li class="b_algo"><h2><a target="_top" href="pages/test.html"> Mean </a></h2>Mean Definition The mean is a numerical measure of the central location of a group of data values. It is the sum of all values divided by the data count... </td><td><img src="img/rat2.png" style="width:120px;height:40px"></td></tr></table><br><br><h2 style="text-align:center">Additional Google Results</h2><table>';
