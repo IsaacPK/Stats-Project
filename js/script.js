@@ -89,7 +89,7 @@ function loadPage(url, ev) {
 		if(likec != null)likec.style.visibility = "hidden";
 		if(dislc != null)dislc.style.visibility = "hidden";
 	}
-	else if(url === "pages/searchResults.html"){
+	else if(url === "pages/searchResults.html" || url === 'searchExample.html'){
 		backb.style.visibility = "visible";
 		if(sendf != null)sendf.style.visibility = "hidden";
 		if(likec != null)likec.style.visibility = "hidden";
